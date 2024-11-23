@@ -4,3 +4,12 @@ language = "ja"
 multilingual = false
 src = "src"
 title = "AiScript Docs"
+
+[output.html]
+additional-css = ["theme/css/language-picker.css"]
+
+[build]
+extra-watch-dirs = ["po"]
+
+[preprocessor.gettext]
+after = ["links"]

@@ -1,5 +1,3 @@
-[Read translated version (en)](../translations/en/docs/builtin-props.md)
-
 組み込みプロパティとは、型ごとに用意された特殊な値あるいは関数です。  
 オブジェクトのプロパティのように`.<name>`の記法で呼び出すことができます。（`[<str>]`の記法は使えません）
 ```js

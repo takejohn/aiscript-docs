@@ -1,7 +1,5 @@
 # Syntax
 
-[Read translated version (en)](../translations/en/docs/syntax.md)
-
 ## 文と式
 AiScriptにおける構文要素は、コメント等を除き「文(statement)」と「式(expression)」の2つからなります。  
 文は行頭または式を受け取る構文要素（ifや関数リテラルなど）にのみ記述することができます。返り値が利用されることを想定されていない構文要素であり、返り値は常にnullです。  

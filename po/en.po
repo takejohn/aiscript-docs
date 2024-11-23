@@ -1,0 +1,3374 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AiScript Docs\n"
+"POT-Creation-Date: 2024-11-23T15:44:29+09:00\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src\SUMMARY.md:1
+msgid "Summary"
+msgstr "Summary"
+
+#: src\SUMMARY.md:3 src\title.md:1
+msgid "AiScript Docs"
+msgstr "AiScript Docs"
+
+#: src\SUMMARY.md:5 src\docs/get-started.md:1
+msgid "Getting started"
+msgstr "Getting started"
+
+#: src\SUMMARY.md:6 src\docs/execution.md:1
+msgid "実行方法"
+msgstr "How to Execute"
+
+#: src\SUMMARY.md:7 src\docs/syntax.md:1
+msgid "Syntax"
+msgstr "Syntax"
+
+#: src\SUMMARY.md:8 src\docs/literals.md:1
+msgid "リテラル式"
+msgstr "Literal Expressions"
+
+#: src\SUMMARY.md:9
+msgid "予約語"
+msgstr "Reserved Words"
+
+#: src\SUMMARY.md:10
+msgid "標準定数・標準関数"
+msgstr "Standard Constants and Functions"
+
+#: src\SUMMARY.md:11 src\docs/std-math.md:1
+msgid "Math"
+msgstr "Math"
+
+#: src\SUMMARY.md:12 src\docs/get-started.md:228
+msgid "組み込みプロパティ"
+msgstr "Built-in Properties"
+
+#: src\docs/get-started.md:3
+msgid "Introduction"
+msgstr "Introduction"
+
+#: src\docs/get-started.md:4
+msgid ""
+"AiScript(あいすくりぷと)は、プログラミング言語です。 このドキュメントでは、既"
+"にある程度のプログラミングの知識があることを前提にしています。 したがって"
+"AiScriptの構文、仕様などについてだけ書き、プログラミング自体についての説明は"
+"省きます。"
+msgstr ""
+"AiScript is a programming language. This document assumes that you already "
+"have some programming knowledge. Therefore, I will only write about the "
+"syntax and specifications of AiScript, and leave out the description of "
+"programming itself."
+
+#: src\docs/get-started.md:8
+msgid "参考：[syntax.md](./syntax.md)"
+msgstr "See also: [syntax.md](./syntax.md)"
+
+#: src\docs/get-started.md:10
+msgid "Hello, world!"
+msgstr "Hello, world!"
+
+#: src\docs/get-started.md:11
+msgid "AiScriptでは、次のように書きます:"
+msgstr "In AiScript, it is written as follows:"
+
+#: src\docs/get-started.md:12
+msgid ""
+"```\n"
+"print(\"Hello, world!\")\n"
+"```"
+msgstr ""
+"```\n"
+"print(\"Hello, world!\")\n"
+"```"
+
+#: src\docs/get-started.md:16
+msgid ""
+"`print( ~ )`は関数呼び出しです。カッコの前に呼び出す関数名を書き、カッコの中"
+"に引数を書きます。 引数が複数あるときは`,`で区切って列挙します。 関数について"
+"の詳細は後述します。"
+msgstr ""
+"`print( ~ )` is a function call. The function's name to be called is written "
+"before the parentheses, and the arguments are written inside the "
+"parentheses. If there are multiple arguments, they are listed separately by "
+"`,`. The details of the function are described later."
+
+#: src\docs/get-started.md:20
+msgid "`\"~\"`は文字列リテラルです。`\"`で囲ったものが文字列になります。"
+msgstr "`\"~\"` is a string literal. Anything enclosed in `\"` is a string."
+
+#: src\docs/get-started.md:22
+msgid "ちなみに、`print( ~ )`には糖衣構文があり、次のようにも書けます:"
+msgstr ""
+"Incidentally, `print( ~ )` has a sugar-coated syntax and can be written as "
+"follows:"
+
+#: src\docs/get-started.md:24
+msgid "\"Hello, world!\""
+msgstr "\"Hello, world!\""
+
+#: src\docs/get-started.md:27 src\docs/syntax.md:8
+msgid "コメント"
+msgstr "Comments"
+
+#: src\docs/get-started.md:28
+msgid ""
+"AiScriptのコメントは`//`で始めます。 コメントはプログラムの動作に影響を与えま"
+"せん。"
+msgstr ""
+"AiScript comments start with `//`. Comments do not affect the behavior of "
+"the program."
+
+#: src\docs/get-started.md:31
+msgid ""
+"```\n"
+"// this is a comment\n"
+"```"
+msgstr ""
+"```\n"
+"// this is a comment\n"
+"```"
+
+#: src\docs/get-started.md:35
+msgid "複数行にわたってコメントアウトする場合、`/*` `*/`で囲みます。"
+msgstr ""
+
+#: src\docs/get-started.md:42
+msgid "組み込み型"
+msgstr "Primary Objects"
+
+#: src\docs/get-started.md:55 src\docs/syntax.md:32
+msgid "変数"
+msgstr "Variables"
+
+#: src\docs/get-started.md:56
+msgid "宣言"
+msgstr "Declarations"
+
+#: src\docs/get-started.md:57
+msgid "変数宣言は次のように書きます:"
+msgstr "The variable declaration is written as follows:"
+
+#: src\docs/get-started.md:58
+msgid ""
+"```\n"
+"let message = \"Hello\"\n"
+"```"
+msgstr ""
+"```\n"
+"let message = \"Hello\"\n"
+"```"
+
+#: src\docs/get-started.md:62
+msgid "`let`のあとに変数名を書き、`=`の後に値を書きます。"
+msgstr "Write the name of the variable after `let` and the value after `=`."
+
+#: src\docs/get-started.md:64
+msgid ""
+"AiScriptではこの方法で宣言した変数はイミュータブルです。つまり、変数の値を後"
+"から変えることは出来ません。 再代入可能な変数を作る時は、`let`の代わりに`var`"
+"で変数宣言します。例:"
+msgstr ""
+"In AiScript, variables declared in this way are immutable. In other words, "
+"you cannot change the value of a variable later. To create a variable that "
+"can be reassigned, declare the variable with `var` instead of `let`. Example:"
+
+#: src\docs/get-started.md:66
+msgid ""
+"```\n"
+"// ミュータブルな変数を宣言\n"
+"var message = \"Hello\"\n"
+"\n"
+"// 再代入\n"
+"message = \"Hi\"\n"
+"\n"
+"// また再代入\n"
+"message = \"Yo\"\n"
+"```"
+msgstr ""
+"```\n"
+"// Declare a mutable variable.\n"
+"var message = \"Hello\"\n"
+"\n"
+"// reassignment\n"
+"message = \"Hi\"\n"
+"\n"
+"// Reassigning again\n"
+"message = \"Yo\"\n"
+"```"
+
+#: src\docs/get-started.md:76
+msgid "なお、同一スコープ内での変数の再宣言は禁止されています。"
+msgstr ""
+
+#: src\docs/get-started.md:78
+msgid "参照"
+msgstr "References"
+
+#: src\docs/get-started.md:79
+msgid "変数の値を参照する時は、単に変数名を書きます:"
+msgstr ""
+"When referring to the value of a variable, simply write the name of the "
+"variable:"
+
+#: src\docs/get-started.md:84 src\docs/literals.md:72
+#: src\docs/builtin-props.md:126
+msgid "配列"
+msgstr "Arrays"
+
+#: src\docs/get-started.md:85
+msgid "`[]`の中に式をスペースで区切って列挙します。"
+msgstr "Enumerate expressions in an array `[]`, separated by spaces."
+
+#: src\docs/get-started.md:86
+msgid ""
+"```\n"
+"[\"ai\", \"chan\", \"kawaii\"]\n"
+"```"
+msgstr ""
+"```\n"
+"[\"ai\", \"chan\", \"kawaii\"]\n"
+"```"
+
+#: src\docs/get-started.md:90
+msgid ""
+"配列の要素にアクセスするときは、`[<index>]`と書きます。 インデックスは0始まり"
+"です。"
+msgstr ""
+"To access an element of an array, write `[<index>]`. The index starts at 0."
+
+#: src\docs/get-started.md:92
+msgid ""
+"```\n"
+"let arr = [\"ai\", \"chan\", \"kawaii\"]\n"
+"<: arr[0] // \"ai\"\n"
+"<: arr[2] // \"kawaii\"\n"
+"```"
+msgstr ""
+"```\n"
+"let arr = [\"ai\", \"chan\", \"kawaii\"]\n"
+"<: arr[0] // \"ai\"\n"
+"<: arr[2] // \"kawaii\"\n"
+"```"
+
+#: src\docs/get-started.md:98 src\docs/literals.md:92
+msgid "オブジェクト"
+msgstr "Objects"
+
+#: src\docs/get-started.md:99
+msgid ""
+"AiScriptにおけるオブジェクトは文字列のみをキーとした連想配列のようなものと"
+"なっています。  \n"
+"キーと値から構成される各要素をプロパティと呼びます。  \n"
+"この時キーをプロパティ名と呼びます。  \n"
+"`{}`の中にプロパティを`,`/`;`/空白で区切って列挙します。 プロパティ名と値は"
+"`: `で区切ります。"
+msgstr ""
+
+#: src\docs/get-started.md:104
+msgid ""
+"```\n"
+"{\n"
+"\tfoo: \"bar\"\n"
+"\tanswer: 42\n"
+"\tnested: {\n"
+"\t\tsome: \"thing\"\n"
+"\t}\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"{\n"
+"\tfoo: \"bar\"\n"
+"\tanswer: 42\n"
+"\tnested: {\n"
+"\t\tsome: \"thing\"\n"
+"\t}\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:114
+msgid ""
+"オブジェクトのプロパティにアクセスするときは、 `.<name>`か`[<str>]`と書きま"
+"す。"
+msgstr ""
+
+#: src\docs/get-started.md:116
+msgid ""
+"```\n"
+"let obj = {foo: \"bar\", answer: 42}\n"
+"<: obj.foo // \"bar\"\n"
+"<: obj[\"answer\"] // 42\n"
+"```"
+msgstr ""
+
+#: src\docs/get-started.md:122
+msgid "演算"
+msgstr "Arithmetic Operations"
+
+#: src\docs/get-started.md:123
+msgid "演算は、"
+msgstr "The operation is"
+
+#: src\docs/get-started.md:127
+msgid ""
+"のように書きます。これは標準関数（後述）呼び出しの糖衣構文で、実際にはこのよ"
+"うに解釈されます:"
+msgstr ""
+"This is a sugar-coated syntax for function calls. This is the sugar-coated "
+"syntax for function calls, and is actually interpreted as such:"
+
+#: src\docs/get-started.md:131
+msgid "詳しくは→[syntax.md](/docs/syntax.md#%E6%BC%94%E7%AE%97%E5%AD%90)"
+msgstr ""
+
+#: src\docs/get-started.md:133
+msgid "ブロック式"
+msgstr "Blocks"
+
+#: src\docs/get-started.md:134
+msgid ""
+"ブロック式 `eval { ~ }` を使うと、ブロック内で最後に書かれた式が値として返さ"
+"れます。"
+msgstr ""
+"A block is a collection of processes, written as `eval { ~ }`. The "
+"expression written at the end of the block will be returned as the value of "
+"the block."
+
+#: src\docs/get-started.md:135
+msgid ""
+"```\n"
+"let foo = eval {\n"
+"\tlet a = 1\n"
+"\tlet b = 2\n"
+"\t(a + b)\n"
+"}\n"
+"\n"
+"<: foo // 3\n"
+"```"
+msgstr ""
+"```\n"
+"let foo = eval {\n"
+"\tlet a = 1\n"
+"\tlet b = 2\n"
+"\t(a + b)\n"
+"}\n"
+"\n"
+"<: foo // 3\n"
+"```"
+
+#: src\docs/get-started.md:145
+msgid "条件分岐"
+msgstr "Conditional Branching"
+
+#: src\docs/get-started.md:146
+msgid "AiScriptでの条件分岐は、次のように書きます:"
+msgstr "The conditional branch in AiScript is written as follows:"
+
+#: src\docs/get-started.md:147
+msgid ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:153
+msgid ""
+"`if`の後にboolを返す式(条件)を書き、その後に条件に一致した場合に評価される式"
+"(then節)を書きます。 then節の後に`else`を書き、さらに式を追加することで条件に"
+"一致しなかった場合の処理も行うことが出来ます:"
+msgstr ""
+"After `if`, write an expression (condition) that returns a bool, followed by "
+"an expression (then clause) that will be evaluated if the condition is met. "
+"You can add `else` after the `then' clause and add an expression to handle "
+"the case when the condition is not met:"
+
+#: src\docs/get-started.md:155
+msgid ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"} else {\n"
+"\t<: \"a does not equal to b\"\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"} else {\n"
+"\t<: \"a does not equal to b\"\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:163
+msgid "`elif`の後に条件式を書くことで条件判定を複数行うことも出来ます:"
+msgstr ""
+"You can also write conditional expressions after `elif` to make multiple "
+"conditional decisions:"
+
+#: src\docs/get-started.md:164
+msgid ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"} elif (a > b) {\n"
+"\t<: \"a is greater than b\"\n"
+"} else {\n"
+"\t<: \"a is less than b\"\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"if (a == b) {\n"
+"\t<: \"a equals to b\"\n"
+"} elif (a > b) {\n"
+"\t<: \"a is greater than b\"\n"
+"} else {\n"
+"\t<: \"a is less than b\"\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:174
+msgid "これらの条件分岐は式なので、ブロック内で値を返せます:"
+msgstr ""
+"Since these conditional branches are expressions, they can return a value in "
+"the block:"
+
+#: src\docs/get-started.md:175
+msgid ""
+"```\n"
+"<: if (a == b) {\n"
+"\t\"a equals to b\"\n"
+"} elif (a > b) {\n"
+"\t\"a is greater than b\"\n"
+"} else {\n"
+"\t\"a is less than b\"\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"<: if (a == b) {\n"
+"\t\"a equals to b\"\n"
+"} elif (a > b) {\n"
+"\t\"a is greater than b\"\n"
+"} else {\n"
+"\t\"a is less than b\"\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:185
+msgid "繰り返し"
+msgstr "Loops"
+
+#: src\docs/get-started.md:186
+msgid "AiScriptでの繰り返しは、次のように書きます:"
+msgstr "To iterate in AiScript, write the following:"
+
+#: src\docs/get-started.md:192
+msgid ""
+"`for`の後にイテレータ変数名を書き、`,`の後に繰り返し回数を返す式を書きます。"
+"その後のブロックで繰り返す処理を書きます。 イテレータ変数は省略することも出来"
+"ます:"
+msgstr ""
+"After `for`, write the name of the iterator variable; after `,` write an "
+"expression that returns the number of iterations. Write the process to be "
+"repeated in the block that follows. The iterator variable can also be "
+"omitted:"
+
+#: src\docs/get-started.md:194
+msgid ""
+"```\n"
+"for (100) {\n"
+"\t<: \"yo\"\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"for (100) {\n"
+"\t<: \"yo\"\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:200
+msgid "繰り返し(配列)"
+msgstr "Loops (Arrays)"
+
+#: src\docs/get-started.md:201
+msgid "`each`を使うと、配列の各アイテムに対し処理を繰り返すことができます:"
+msgstr "You can use `each` to repeat items in an array:"
+
+#: src\docs/get-started.md:202
+msgid ""
+"```\n"
+"let items = [\"a\", \"b\", \"c\"]\n"
+"each (let item, items) {\n"
+"\t<: item\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"let items = [\"a\", \"b\", \"c\"]\n"
+"each (let item, items) {\n"
+"\t<: item\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:209 src\docs/syntax.md:49 src\docs/literals.md:108
+msgid "関数"
+msgstr "Functions"
+
+#: src\docs/get-started.md:210
+msgid "関数定義"
+msgstr "Function Definition"
+
+#: src\docs/get-started.md:211
+msgid "次のように書きます:"
+msgstr "Write the following:"
+
+#: src\docs/get-started.md:218
+msgid ""
+"`@`の後に関数名を書き、カッコの中に引数定義を書きます。その後にブロックが関数"
+"の処理になります。"
+msgstr ""
+"Write the function name after `@` and the argument definition in "
+"parentheses. After that, the block becomes the process of the function."
+
+#: src\docs/get-started.md:220
+msgid "return"
+msgstr "return"
+
+#: src\docs/get-started.md:221
+msgid ""
+"関数の最後に書かれた式の値が関数の返り値になりますが、関数の途中で値を返した"
+"い時は`return`を使います。"
+msgstr ""
+"The value of the expression written at the end of the function will be the "
+"function's return value, but if you want to return a value in the middle of "
+"the function, use `return`."
+
+#: src\docs/get-started.md:223
+msgid "標準定数、標準関数"
+msgstr ""
+
+#: src\docs/get-started.md:224
+msgid "何も書かなくても最初から使える定数・関数です。"
+msgstr ""
+
+#: src\docs/get-started.md:226
+msgid "[標準定数・関数一覧](./std.md)"
+msgstr ""
+
+#: src\docs/get-started.md:229
+msgid ""
+"オブジェクト以外の値に`.`をつけて呼び出すことができる擬似的なプロパティです。"
+msgstr ""
+
+#: src\docs/get-started.md:231
+msgid "[組み込みプロパティ一覧](./builtin-props.md)"
+msgstr ""
+
+#: src\docs/get-started.md:233
+msgid "テンプレート"
+msgstr "Templates"
+
+#: src\docs/get-started.md:234
+msgid "バッククォートを使うと、文字列の中に変数や式を埋め込めます:"
+msgstr "You can embed variables and expressions in a string:"
+
+#: src\docs/get-started.md:235
+msgid ""
+"```\n"
+"let ai = \"kawaii\"\n"
+"<: `Hello, {ai} world!`\n"
+"// 結果: Hello, kawaii world!\n"
+"```"
+msgstr ""
+"```\n"
+"let ai = \"kawaii\"\n"
+"<: `Hello, {ai} world!`\n"
+"// 結果: Hello, kawaii world!\n"
+"```"
+
+#: src\docs/get-started.md:241
+msgid "メタデータ"
+msgstr "Metadata"
+
+#: src\docs/get-started.md:242
+msgid "AiScriptファイルにメタデータを埋め込める機能です。"
+msgstr "This function allows you to embed metadata in AiScript files."
+
+#: src\docs/get-started.md:243
+msgid ""
+"```\n"
+"### {\n"
+"\tname: \"example\"\n"
+"\tversion: 42\n"
+"\tkeywords: [\"foo\", \"bar\", \"baz\"]\n"
+"}\n"
+"```"
+msgstr ""
+"```\n"
+"### {\n"
+"\tname: \"example\"\n"
+"\tversion: 42\n"
+"\tkeywords: [\"foo\", \"bar\", \"baz\"]\n"
+"}\n"
+"```"
+
+#: src\docs/get-started.md:251 src\docs/literals.md:131
+#: src\docs/builtin-props.md:255
+msgid "エラー型"
+msgstr ""
+
+#: src\docs/get-started.md:252
+msgid ""
+"一部の標準関数は実行失敗時にエラー型の値を返します。  \n"
+"これによりエラー処理を行うことができます。"
+msgstr ""
+
+#: src\docs/get-started.md:262
+msgid "エラーメッセージ"
+msgstr ""
+
+#: src\docs/get-started.md:263
+msgid "進行不能なエラーが発生するとエラーメッセージが表示されます。"
+msgstr ""
+
+#: src\docs/get-started.md:264
+msgid ""
+"```\n"
+"let scores=[10, 8, 5, 5]\n"
+"let 3rd=scores[2] // unexpected token: NumberLiteral (Line 2, Column 5)\n"
+"```"
+msgstr ""
+
+#: src\docs/get-started.md:268
+msgid ""
+"```\n"
+"let arr=[]\n"
+"arr[0] // Runtime: Index out of range. Index: 0 max: -1 (Line 2, Column 4)\n"
+"```"
+msgstr ""
+
+#: src\docs/get-started.md:272
+msgid "行(Line)、列(Column)は1始まりです。"
+msgstr ""
+
+#: src\docs/execution.md:2
+msgid "1. Playgroundから実行"
+msgstr ""
+
+#: src\docs/execution.md:3
+msgid ""
+"自分でホストする場合は、以下のコマンドを実行し表示されたリンクをブラウザで開"
+"きます。"
+msgstr ""
+
+#: src\docs/execution.md:10
+msgid ""
+"PlaygroundはGitHubでもホストされています：  \n"
+"https://aiscript-dev.github.io/aiscript/"
+msgstr ""
+
+#: src\docs/execution.md:13
+msgid "2. スクリプトファイルから実行"
+msgstr ""
+
+#: src\docs/execution.md:14
+msgid "ファイルの内容を解析して実行します。"
+msgstr ""
+
+#: src\docs/execution.md:16 src\docs/execution.md:30
+msgid ""
+"プロジェクトルートに`main.ais`を作成し、以下の内容を記述しファイルに保存しま"
+"す。"
+msgstr ""
+
+#: src\docs/execution.md:17 src\docs/execution.md:31
+msgid ""
+"```\n"
+"<: \"Hello world!\"\n"
+"```"
+msgstr ""
+
+#: src\docs/execution.md:21 src\docs/execution.md:35
+msgid "以下のコマンドを実行します。"
+msgstr ""
+
+#: src\docs/execution.md:26
+msgid "3. スクリプトファイルを解析する (パーサーのデバッグ向け)"
+msgstr ""
+
+#: src\docs/execution.md:27
+msgid ""
+"ファイルの内容を解析してASTを表示することができます。 主にパーサーのデバッグ"
+"向けで、インタプリタの実装状況に関わらずASTの内容を表示することができます。"
+msgstr ""
+
+#: src\docs/execution.md:40
+msgid "4. REPL上で実行"
+msgstr ""
+
+#: src\docs/execution.md:41
+msgid ""
+"コマンドライン上で対話的にコードを実行します。 以下のコマンドを実行し、コード"
+"を入力します。"
+msgstr ""
+
+#: src\docs/syntax.md:3
+msgid "文と式"
+msgstr ""
+
+#: src\docs/syntax.md:4
+msgid ""
+"AiScriptにおける構文要素は、コメント等を除き「文(statement)」と「式"
+"(expression)」の2つからなります。  \n"
+"文は行頭または式を受け取る構文要素（ifや関数リテラルなど）にのみ記述すること"
+"ができます。返り値が利用されることを想定されていない構文要素であり、返り値は"
+"常にnullです。  \n"
+"対して式は、文を書ける場所に加えて何らかの値を要求するほとんど全ての構文要素"
+"の内部に書くことができます。また、多くの場合何らかの意味ある値を返します。"
+msgstr ""
+
+#: src\docs/syntax.md:9
+msgid ""
+"`//`で始めた行や`/*` `*/`で囲んだ箇所はコメントになり、プログラムの動作に影響"
+"を与えません。"
+msgstr ""
+
+#: src\docs/syntax.md:12
+msgid "// 単行コメント"
+msgstr ""
+
+#: src\docs/syntax.md:12
+msgid "/*"
+msgstr ""
+
+#: src\docs/syntax.md:18
+msgid "バージョン表記"
+msgstr ""
+
+#: src\docs/syntax.md:19
+msgid ""
+"プログラムの一行目に以下の記法を行うことで、想定されたAiScriptのバージョンを"
+"明記することができます。  \n"
+"このバージョンはホストプログラムによって読み込まれる場合があります。"
+msgstr ""
+
+#: src\docs/syntax.md:22
+msgid "/// @ 0.16.0"
+msgstr ""
+
+#: src\docs/syntax.md:25
+msgid "文"
+msgstr ""
+
+#: src\docs/syntax.md:27
+msgid "変数・関数宣言"
+msgstr ""
+
+#: src\docs/syntax.md:28
+msgid ""
+"イミュータブル変数（定数）には`let`、ミュータブル変数には`var`、関数には`@`を"
+"使用します。"
+msgstr ""
+
+#: src\docs/syntax.md:29 src\docs/keywords.md:1
+msgid "予約語について"
+msgstr ""
+
+#: src\docs/syntax.md:30
+msgid ""
+"変数や関数の宣言において、名前として使用できないキーワードがいくつかありま"
+"す。  \n"
+"詳しくは[keywords.md](./keywords.md)を参照ください。"
+msgstr ""
+
+#: src\docs/syntax.md:34
+msgid "// イミュータブル（再代入不可）"
+msgstr ""
+
+#: src\docs/syntax.md:35
+msgid "// ミュータブル（再代入可能）"
+msgstr ""
+
+#: src\docs/syntax.md:40
+msgid "// 初期値の省略は不可"
+msgstr ""
+
+#: src\docs/syntax.md:41 src\docs/syntax.md:43 src\docs/syntax.md:98
+#: src\docs/syntax.md:102 src\docs/syntax.md:111 src\docs/syntax.md:196
+#: src\docs/syntax.md:215 src\docs/syntax.md:228 src\docs/syntax.md:376
+#: src\docs/syntax.md:377 src\docs/syntax.md:380 src\docs/syntax.md:381
+#: src\docs/literals.md:69 src\docs/literals.md:103 src\docs/literals.md:105
+msgid "// Syntax Error"
+msgstr ""
+
+#: src\docs/syntax.md:41
+msgid "// match等の予約語は変数名として使用できない"
+msgstr ""
+
+#: src\docs/syntax.md:43
+msgid "// 同名の変数の再宣言は禁止"
+msgstr ""
+
+#: src\docs/syntax.md:46 src\docs/syntax.md:47 src\docs/syntax.md:107
+#: src\docs/syntax.md:124 src\docs/syntax.md:166 src\docs/syntax.md:170
+#: src\docs/syntax.md:176 src\docs/syntax.md:177
+msgid "// Runtime Error"
+msgstr ""
+
+#: src\docs/syntax.md:50
+msgid ""
+"関数宣言はイミュータブル変数を関数で初期化するのと同じ動作になっています。"
+msgstr ""
+
+#: src\docs/syntax.md:52 src\docs/literals.md:111
+msgid "// 最後の式が暗黙にreturnされる"
+msgstr ""
+
+#: src\docs/syntax.md:56 src\docs/syntax.md:393 src\docs/literals.md:116
+msgid "// 3"
+msgstr ""
+
+#: src\docs/syntax.md:56
+msgid "// 定数をリテラル関数で初期化しても同じ働きになる"
+msgstr ""
+
+#: src\docs/syntax.md:60 src\docs/literals.md:116
+msgid "// 明示的にreturnを書くこともできる"
+msgstr ""
+
+#: src\docs/syntax.md:64 src\docs/literals.md:120
+msgid "// 引数を複数行で書いてもよい"
+msgstr ""
+
+#: src\docs/syntax.md:71
+msgid "// 省略可能引数"
+msgstr ""
+
+#: src\docs/syntax.md:75
+msgid "// 省略されるとnullになる"
+msgstr ""
+
+#: src\docs/syntax.md:77 src\docs/syntax.md:85 src\docs/syntax.md:87
+#: src\docs/syntax.md:108 src\docs/syntax.md:132 src\docs/syntax.md:150
+#: src\docs/syntax.md:177 src\docs/syntax.md:244 src\docs/syntax.md:259
+#: src\docs/literals.md:78 src\docs/literals.md:83 src\docs/literals.md:97
+#: src\docs/literals.md:99 src\docs/literals.md:103 src\docs/literals.md:105
+#: src\docs/keywords.md:7
+msgid "'hoge'"
+msgstr ""
+
+#: src\docs/syntax.md:77
+msgid "// 'hoge' null"
+msgstr ""
+
+#: src\docs/syntax.md:77
+msgid "// 初期値を設定された引数（省略可能引数と組み合わせて使用可能）"
+msgstr ""
+
+#: src\docs/syntax.md:79 src\docs/syntax.md:166 src\docs/literals.md:80
+#: src\docs/literals.md:85
+msgid "'piyo'"
+msgstr ""
+
+#: src\docs/syntax.md:85 src\docs/syntax.md:91 src\docs/syntax.md:132
+#: src\docs/syntax.md:150 src\docs/syntax.md:177
+msgid "'fuga'"
+msgstr ""
+
+#: src\docs/syntax.md:85
+msgid "// 'hoge' 'fuga' 'piyo' null"
+msgstr ""
+
+#: src\docs/syntax.md:85
+msgid "// 初期値には変数を使用可能（値は宣言時点で固定）"
+msgstr ""
+
+#: src\docs/syntax.md:92 src\docs/syntax.md:133
+msgid "// 'hoge'"
+msgstr ""
+
+#: src\docs/syntax.md:92 src\docs/syntax.md:405 src\docs/literals.md:128
+msgid "// ワンライナー"
+msgstr ""
+
+#: src\docs/syntax.md:97
+msgid "// match等の予約語は関数名として使用できない"
+msgstr ""
+
+#: src\docs/syntax.md:100
+msgid "// 最後の引数の後にはコロンを付けられない"
+msgstr ""
+
+#: src\docs/syntax.md:104
+msgid "// 変数同様再宣言は不可"
+msgstr ""
+
+#: src\docs/syntax.md:109
+msgid "// 省略可能引数構文と初期値構文は併用できない"
+msgstr ""
+
+#: src\docs/syntax.md:114
+msgid "代入"
+msgstr ""
+
+#: src\docs/syntax.md:115
+msgid "宣言済みの変数の値を変更します。"
+msgstr ""
+
+#: src\docs/syntax.md:119
+msgid "// 1"
+msgstr ""
+
+#: src\docs/syntax.md:122
+msgid "// letで宣言された変数は代入不可"
+msgstr ""
+
+#: src\docs/syntax.md:127
+msgid "分割代入"
+msgstr ""
+
+#: src\docs/syntax.md:129
+msgid "// 配列の分割代入"
+msgstr ""
+
+#: src\docs/syntax.md:130 src\docs/syntax.md:131
+msgid "''"
+msgstr ""
+
+#: src\docs/syntax.md:134
+msgid "// 'fuga'"
+msgstr ""
+
+#: src\docs/syntax.md:134
+msgid "// オブジェクトの分割代入"
+msgstr ""
+
+#: src\docs/syntax.md:136
+msgid "'Ai-chan'"
+msgstr ""
+
+#: src\docs/syntax.md:136 src\docs/syntax.md:142 src\docs/syntax.md:171
+#: src\docs/syntax.md:296
+msgid "'kawaii'"
+msgstr ""
+
+#: src\docs/syntax.md:137
+msgid "// 'Ai-chan'"
+msgstr ""
+
+#: src\docs/syntax.md:138
+msgid "// 'kawaii'"
+msgstr ""
+
+#: src\docs/syntax.md:138
+msgid "// 組み合わせ"
+msgstr ""
+
+#: src\docs/syntax.md:141
+msgid "'Ai-kun'"
+msgstr ""
+
+#: src\docs/syntax.md:142 src\docs/syntax.md:171
+msgid "'kakkoii'"
+msgstr ""
+
+#: src\docs/syntax.md:142
+msgid "'ponkotsu'"
+msgstr ""
+
+#: src\docs/syntax.md:145
+msgid "// 'Ai-kun'"
+msgstr ""
+
+#: src\docs/syntax.md:146
+msgid "// 'kakkoii'"
+msgstr ""
+
+#: src\docs/syntax.md:149
+msgid "// 宣言で分割代入を使うことも可能"
+msgstr ""
+
+#: src\docs/syntax.md:153
+msgid "// 1, 2"
+msgstr ""
+
+#: src\docs/syntax.md:155
+msgid "// 引数でも使用可能"
+msgstr ""
+
+#: src\docs/syntax.md:160
+msgid "// [1, 2]"
+msgstr ""
+
+#: src\docs/syntax.md:161
+msgid "// [1, null], not [1, 0]"
+msgstr ""
+
+#: src\docs/syntax.md:162
+msgid "// [0, 0]"
+msgstr ""
+
+#: src\docs/syntax.md:163
+msgid "// 再宣言を含む宣言は不可"
+msgstr ""
+
+#: src\docs/syntax.md:167
+msgid "// 名前空間での宣言では使用不可"
+msgstr ""
+
+#: src\docs/syntax.md:175
+msgid "// 代入値が分割できる型でなければエラー"
+msgstr ""
+
+#: src\docs/syntax.md:180
+msgid "for"
+msgstr ""
+
+#: src\docs/syntax.md:181
+msgid "与えられた回数のループを行います。"
+msgstr ""
+
+#: src\docs/syntax.md:184
+msgid "'Wan'"
+msgstr ""
+
+#: src\docs/syntax.md:184
+msgid "// WanWanWanWanWan"
+msgstr ""
+
+#: src\docs/syntax.md:184
+msgid "// {}を使うことで複数の文を書ける"
+msgstr ""
+
+#: src\docs/syntax.md:187
+msgid "'Nyan'"
+msgstr ""
+
+#: src\docs/syntax.md:188
+msgid "// NyanNyanNyanNyanNyan"
+msgstr ""
+
+#: src\docs/syntax.md:188
+msgid "// ()でくくってもよい"
+msgstr ""
+
+#: src\docs/syntax.md:191
+msgid "'Piyo'"
+msgstr ""
+
+#: src\docs/syntax.md:192
+msgid "// PiyoPiyoPiyo"
+msgstr ""
+
+#: src\docs/syntax.md:195 src\docs/syntax.md:227
+msgid "// {の直前に空白必須"
+msgstr ""
+
+#: src\docs/syntax.md:197
+msgid "'Mogu'"
+msgstr ""
+
+#: src\docs/syntax.md:200
+msgid "for-let"
+msgstr ""
+
+#: src\docs/syntax.md:201
+msgid "イテレータ変数を宣言し、ループ内で参照することができます。"
+msgstr ""
+
+#: src\docs/syntax.md:205
+msgid "// 0 1 2 3 4"
+msgstr ""
+
+#: src\docs/syntax.md:205
+msgid "// 初期値を設定することもできる"
+msgstr ""
+
+#: src\docs/syntax.md:209
+msgid "// 3 4 5 6 7"
+msgstr ""
+
+#: src\docs/syntax.md:212
+msgid "// イテレータ変数はletで宣言される必要がある"
+msgstr ""
+
+#: src\docs/syntax.md:218
+msgid "each"
+msgstr ""
+
+#: src\docs/syntax.md:219
+msgid "配列の各要素に対しループを行います。"
+msgstr ""
+
+#: src\docs/syntax.md:221
+msgid "'foo'"
+msgstr ""
+
+#: src\docs/syntax.md:221
+msgid "'bar'"
+msgstr ""
+
+#: src\docs/syntax.md:221
+msgid "'baz'"
+msgstr ""
+
+#: src\docs/syntax.md:224
+msgid "// foo bar baz"
+msgstr ""
+
+#: src\docs/syntax.md:233
+msgid "while"
+msgstr ""
+
+#: src\docs/syntax.md:234
+msgid ""
+"条件がtrueの間ループを続けます。  \n"
+"条件が最初からfalseの場合はループは実行されません。"
+msgstr ""
+
+#: src\docs/syntax.md:241 src\docs/syntax.md:256
+msgid "// 42"
+msgstr ""
+
+#: src\docs/syntax.md:241 src\docs/syntax.md:256
+msgid "// 条件が最初からfalseの場合"
+msgstr ""
+
+#: src\docs/syntax.md:245
+msgid "// no output"
+msgstr ""
+
+#: src\docs/syntax.md:248
+msgid "do-while"
+msgstr ""
+
+#: src\docs/syntax.md:249
+msgid ""
+"条件がtrueの間ループを続けます。  \n"
+"条件が最初からfalseであってもループは一度実行されます。"
+msgstr ""
+
+#: src\docs/syntax.md:260
+msgid "// hoge"
+msgstr ""
+
+#: src\docs/syntax.md:263
+msgid "loop"
+msgstr ""
+
+#: src\docs/syntax.md:264
+msgid "`break`されるまで無制限にループを行います。"
+msgstr ""
+
+#: src\docs/syntax.md:271
+msgid "// 5 4 3 2 1"
+msgstr ""
+
+#: src\docs/syntax.md:274
+msgid "グローバル専用文"
+msgstr ""
+
+#: src\docs/syntax.md:275
+msgid ""
+"他の構文要素の内部に書くことを許容されない特殊な文です。  \n"
+"これらの構文要素は実行開始時に巻き上げられるため、プログラム上のどこに書いて"
+"も最初に読み込まれます。"
+msgstr ""
+
+#: src\docs/syntax.md:278
+msgid "メタデータ構文"
+msgstr ""
+
+#: src\docs/syntax.md:279
+msgid ""
+"オブジェクトリテラルと類似した記法でAiScriptファイルにメタデータを埋め込める"
+"機能です。  \n"
+"メタデータはホストプログラムによって読まれる場合があります。  \n"
+"要素として関数を除く純粋な[リテラル](./literals.md)のみが許可されており、それ"
+"以外の式を含むと構文エラーとなります。"
+msgstr ""
+
+#: src\docs/syntax.md:284
+msgid "\"example\""
+msgstr ""
+
+#: src\docs/syntax.md:286
+msgid "\"foo\""
+msgstr ""
+
+#: src\docs/syntax.md:286
+msgid "\"bar\""
+msgstr ""
+
+#: src\docs/syntax.md:286
+msgid "\"baz\""
+msgstr ""
+
+#: src\docs/syntax.md:290
+msgid "名前空間"
+msgstr ""
+
+#: src\docs/syntax.md:291
+msgid ""
+"複数の定数・関数に共通した接頭辞をつけることのできる機能です。  \n"
+"ミュータブルな変数の存在は許容されていません。  \n"
+"未発達な機能であり、今後役割が大きく変更される可能性があります。"
+msgstr ""
+
+#: src\docs/syntax.md:301 src\docs/syntax.md:302
+msgid "// kawaii"
+msgstr ""
+
+#: src\docs/syntax.md:305
+msgid "式"
+msgstr ""
+
+#: src\docs/syntax.md:307
+msgid "リテラル"
+msgstr ""
+
+#: src\docs/syntax.md:308
+msgid ""
+"値をスクリプト中に直接書き込むことができる構文です。  \n"
+"詳しくは→[literals.md](./literals.md)"
+msgstr ""
+
+#: src\docs/syntax.md:311
+msgid "演算子"
+msgstr ""
+
+#: src\docs/syntax.md:312
+msgid "主要な演算を表現します。"
+msgstr ""
+
+#: src\docs/syntax.md:313
+msgid "単項演算子"
+msgstr ""
+
+#: src\docs/syntax.md:314
+msgid ""
+"式に前置して使用します。論理否定（`!`）、正数符号（`+`）、負数符号（`-`）の三"
+"種があります。"
+msgstr ""
+
+#: src\docs/syntax.md:315
+msgid "二項演算子"
+msgstr ""
+
+#: src\docs/syntax.md:316
+msgid ""
+"２つの式の間に置いて使用します。四則演算とその派生（`+`,`-`,`*`,`^`,`/`,"
+"`%`)、比較演算（`==`,`!=`,`<`,`<=`,`>`,`>=`）、論理演算（`&&`,`||`）がありま"
+"す。"
+msgstr ""
+
+#: src\docs/syntax.md:317
+msgid "演算子の優先度"
+msgstr ""
+
+#: src\docs/syntax.md:318
+msgid ""
+"例えば`1 + 2 * 3`などは`2 * 3`が先に計算されてから`1 +`が行われます。これは"
+"`*`の優先度が`+`より高いことによるものです。優先度の一覧は下の表をご覧下さ"
+"い。  \n"
+"この優先度は`(1 + 2) * 3`のように`(` `)`で括ることで変えることができます。"
+msgstr ""
+
+#: src\docs/syntax.md:320
+msgid "二項演算子の糖衣構文性"
+msgstr ""
+
+#: src\docs/syntax.md:321
+msgid ""
+"二項演算子は構文解析の過程でそれぞれ対応する組み込み関数に置き換えられま"
+"す。  \n"
+"（単項演算子である`!`にも対応する関数`Core:not`が存在しますが、置き換えは行わ"
+"れていません）  \n"
+"何の関数に置き換えられるかは下の表をご覧下さい。"
+msgstr ""
+
+#: src\docs/syntax.md:324
+msgid "演算子一覧"
+msgstr ""
+
+#: src\docs/syntax.md:325
+msgid "上から順に優先度が高くなっています。（一部優先度が同じものもあります）"
+msgstr ""
+
+#: src\docs/syntax.md:347
+msgid "if"
+msgstr ""
+
+#: src\docs/syntax.md:348
+msgid ""
+"キーワード`if`に続く式がtrueに評価されるかfalseに評価されるかで条件分岐を行い"
+"ます。  \n"
+"式として扱うことができ、最後の文の値を返します。 `if`の直後に１つ以上の空白ま"
+"たはタブを挟む必要があります。（改行があっても）  \n"
+"条件式が`bool`型ではない値に評価されるとエラーになります。"
+msgstr ""
+
+#: src\docs/syntax.md:353
+msgid "// 単行"
+msgstr ""
+
+#: src\docs/syntax.md:354 src\docs/syntax.md:357 src\docs/syntax.md:365
+msgid "\"correct answer\""
+msgstr ""
+
+#: src\docs/syntax.md:354
+msgid "// 複数行"
+msgstr ""
+
+#: src\docs/syntax.md:358
+msgid "// 条件式は()で囲ってもよい"
+msgstr ""
+
+#: src\docs/syntax.md:360
+msgid "'ok'"
+msgstr ""
+
+#: src\docs/syntax.md:360
+msgid "// 式として使用可能"
+msgstr ""
+
+#: src\docs/syntax.md:362
+msgid "`{if answer == 42 \"collect answer\"}`"
+msgstr ""
+
+#: src\docs/syntax.md:362
+msgid "// else, elifも使用可能"
+msgstr ""
+
+#: src\docs/syntax.md:364
+msgid "\"bebeyo\""
+msgstr ""
+
+#: src\docs/syntax.md:366
+msgid "\"ai\""
+msgstr ""
+
+#: src\docs/syntax.md:367
+msgid "\"kawaii\""
+msgstr ""
+
+#: src\docs/syntax.md:369
+msgid "\"wrong answer\""
+msgstr ""
+
+#: src\docs/syntax.md:370
+msgid "// elseがない場合、条件式がfalseならnullを返す"
+msgstr ""
+
+#: src\docs/syntax.md:372
+msgid "// null"
+msgstr ""
+
+#: src\docs/syntax.md:375
+msgid "// 条件式の前後の空白は必須（かっこでくくっていても）"
+msgstr ""
+
+#: src\docs/syntax.md:377
+msgid "// elif, elseの直前の空白は必須"
+msgstr ""
+
+#: src\docs/syntax.md:384
+msgid "eval"
+msgstr ""
+
+#: src\docs/syntax.md:385
+msgid "別名ブロック式。 `{ }`内の文を順次評価し、最後の文の値を返します。"
+msgstr ""
+
+#: src\docs/syntax.md:396
+msgid "match"
+msgstr ""
+
+#: src\docs/syntax.md:400 src\docs/syntax.md:407
+msgid "\"yes\""
+msgstr ""
+
+#: src\docs/syntax.md:401 src\docs/syntax.md:407
+msgid "\"no\""
+msgstr ""
+
+#: src\docs/syntax.md:402 src\docs/syntax.md:407
+msgid "\"other\""
+msgstr ""
+
+#: src\docs/syntax.md:404 src\docs/syntax.md:407
+msgid "// \"yes\""
+msgstr ""
+
+#: src\docs/syntax.md:410
+msgid "exists"
+msgstr ""
+
+#: src\docs/syntax.md:411
+msgid ""
+"与えられた名称の変数または関数が存在すればtrue、しなければfalseを返します。"
+msgstr ""
+
+#: src\docs/syntax.md:413
+msgid "// 変数barは存在しないためfalse"
+msgstr ""
+
+#: src\docs/syntax.md:414
+msgid "// 変数fooが存在するためtrue"
+msgstr ""
+
+#: src\docs/literals.md:2
+msgid ""
+"AiScriptにおけるリテラルとは、値を文字列として書き表すための表記法です。  \n"
+"リテラルはスクリプト中でそのまま式として使用することができます。  \n"
+"null、真理値、数値、文字列、オブジェクト、関数のリテラルが存在しています。"
+msgstr ""
+
+#: src\docs/literals.md:6
+msgid "null"
+msgstr ""
+
+#: src\docs/literals.md:11
+msgid "真理値"
+msgstr ""
+
+#: src\docs/literals.md:17 src\docs/builtin-props.md:20
+msgid "数値"
+msgstr ""
+
+#: src\docs/literals.md:18
+msgid "十進以外の記数法はサポートされていません。"
+msgstr ""
+
+#: src\docs/literals.md:20
+msgid "// 自然数"
+msgstr ""
+
+#: src\docs/literals.md:21
+msgid "// 負数"
+msgstr ""
+
+#: src\docs/literals.md:22
+msgid "// 小数"
+msgstr ""
+
+#: src\docs/literals.md:24
+msgid ""
+"※負数を表す`-`は数値リテラルのみで使用できます。`-variable`のような表記はサ"
+"ポートされていません。"
+msgstr ""
+
+#: src\docs/literals.md:26 src\docs/builtin-props.md:27
+msgid "文字列"
+msgstr ""
+
+#: src\docs/literals.md:27
+msgid ""
+"`'`または`\"`が使用可能な通常の文字列リテラルと、`` ` ``を使用し文中に式を含"
+"むことができるテンプレートリテラルがあります。"
+msgstr ""
+
+#: src\docs/literals.md:29
+msgid "エスケープについて"
+msgstr ""
+
+#: src\docs/literals.md:30
+msgid ""
+"`\\`を前置した文字は、構文の一部ではなく一つの文字として解釈されます。  \n"
+"例えば`'\\''`は`'`、  \n"
+"`\"\\\"\"`では`\"`、  \n"
+"``` `\\`` ```は`` ` ``、  \n"
+"`` `\\{` ``は`{`、として解釈されます。  \n"
+"特に構文としての意味を持たない文字の場合、単に`\\`が無視されます。例："
+"`'\\n'` → `n`  \n"
+"文字`\\`を使用したい場合は`'\\\\'`のように２つ繋げてください。  \n"
+"エスケープシーケンスは未サポートです。"
+msgstr ""
+
+#: src\docs/literals.md:39
+msgid "文字列リテラル"
+msgstr ""
+
+#: src\docs/literals.md:41
+msgid "'ここでは\"を文字列に含むことができます'"
+msgstr ""
+
+#: src\docs/literals.md:41
+msgid "\"ここでは'を文字列に含むことができます\""
+msgstr ""
+
+#: src\docs/literals.md:42
+msgid "'エスケープすれば\\'を含むことができます'"
+msgstr ""
+
+#: src\docs/literals.md:43
+msgid "\"エスケープすれば\\\"を含むことができます\""
+msgstr ""
+
+#: src\docs/literals.md:44
+msgid "'改行"
+msgstr ""
+
+#: src\docs/literals.md:46
+msgid "'"
+msgstr ""
+
+#: src\docs/literals.md:46
+msgid "\"改行 // ここにコメントを書くと文字列の一部になります"
+msgstr ""
+
+#: src\docs/literals.md:48
+msgid "\" // ここは問題なし"
+msgstr ""
+
+#: src\docs/literals.md:51
+msgid "テンプレートリテラル"
+msgstr ""
+
+#: src\docs/literals.md:52
+msgid ""
+"変数や式を埋め込んだ文字列を作成するためのリテラルです。  \n"
+"全体を`` ` ` ``で囲い、式を埋め込む場所は`{ }`で囲います。  \n"
+"式の値が文字列でない場合は、[Core:to_str](./std.md)と同じ方法で文字列に変換さ"
+"れます。"
+msgstr ""
+
+#: src\docs/literals.md:56
+msgid "`Ai chan is No.{ 2-1 }` // Ai chan is No.1"
+msgstr ""
+
+#: src\docs/literals.md:56
+msgid "// 改行可　一行にしたい場合は{ Str:lf }を使う"
+msgstr ""
+
+#: src\docs/literals.md:57
+msgid "`This statement is { true }."
+msgstr ""
+
+#: src\docs/literals.md:59
+msgid "// \\を前置することで`、{、}、をエスケープできる"
+msgstr ""
+
+#: src\docs/literals.md:60
+msgid "`\\` \\{ \\}` // ` { }"
+msgstr ""
+
+#: src\docs/literals.md:64
+msgid ""
+"// { }の中身が空であってはならない（{ }を文字列として使いたい場合はエスケープ"
+"すること）"
+msgstr ""
+
+#: src\docs/literals.md:64
+msgid "`Everything is { } here.` // Syntax Error"
+msgstr ""
+
+#: src\docs/literals.md:65
+msgid "// 式の前後で改行をしてはならない（式中で改行するのは可）"
+msgstr ""
+
+#: src\docs/literals.md:66
+msgid "`Oops, something went {"
+msgstr ""
+
+#: src\docs/literals.md:74
+msgid "// 空の配列"
+msgstr ""
+
+#: src\docs/literals.md:75
+msgid "// コロンで区切ることも出来る"
+msgstr ""
+
+#: src\docs/literals.md:76
+msgid "// 最後の項に,をつけてもよい"
+msgstr ""
+
+#: src\docs/literals.md:77
+msgid "// 改行区切りも可"
+msgstr ""
+
+#: src\docs/literals.md:79 src\docs/literals.md:84
+msgid "'huga'"
+msgstr ""
+
+#: src\docs/literals.md:82
+msgid "// コロンと改行の併用可"
+msgstr ""
+
+#: src\docs/literals.md:89 src\docs/literals.md:102
+msgid "// 空白区切りは廃止済み"
+msgstr ""
+
+#: src\docs/literals.md:94
+msgid "// 空のオブジェクト"
+msgstr ""
+
+#: src\docs/literals.md:95
+msgid "// 改行区切り"
+msgstr ""
+
+#: src\docs/literals.md:99
+msgid "// コロン区切り"
+msgstr ""
+
+#: src\docs/literals.md:103
+msgid "// セミコロン区切りは廃止済み"
+msgstr ""
+
+#: src\docs/literals.md:109
+msgid ""
+"関数のリテラルは「無名関数」と呼ばれており、[関数の宣言](./syntax."
+"md#%E9%96%A2%E6%95%B0)とよく似た形をしていますが、関数名がありません。（そし"
+"て、リテラルなので当然ながら、文ではなく式です）"
+msgstr ""
+
+#: src\docs/literals.md:111
+msgid "// 何もしない関数"
+msgstr ""
+
+#: src\docs/literals.md:132
+msgid ""
+"エラー型のリテラルはありませんが、[Error:create](./std.md)で値を作ることがで"
+"きます。"
+msgstr ""
+
+#: src\docs/keywords.md:2
+msgid ""
+"AiScriptにおける予約語とは、変数や関数の名前として使用することが禁止されてい"
+"る単語のことを言います。  \n"
+"使用するとSyntax Errorとなります。"
+msgstr ""
+
+#: src\docs/keywords.md:5
+msgid "// matchとforは予約語"
+msgstr ""
+
+#: src\docs/keywords.md:6 src\docs/keywords.md:7
+msgid "// エラー"
+msgstr ""
+
+#: src\docs/keywords.md:10
+msgid "使用中の語と使用予定の語"
+msgstr ""
+
+#: src\docs/keywords.md:11
+msgid ""
+"`match`や`for`は文法中で既にキーワードとして使用されています。  \n"
+"もしこれらが変数名として使用されると、プログラムの見た目が紛らわしいものにな"
+"るだけでなく、文法解析上のコストが増加します。  \n"
+"ゆえに文法中のキーワードは基本的に全て予約語となっています。"
+msgstr ""
+
+#: src\docs/keywords.md:15
+msgid ""
+"一方で、いくつかの単語は文法中に存在しないにも関わらず予約語となっていま"
+"す。  \n"
+"これは将来文法が拡張された時に使用される可能性を見越してのものです。"
+msgstr ""
+
+#: src\docs/keywords.md:18 src\docs/std.md:13
+msgid "一覧"
+msgstr ""
+
+#: src\docs/keywords.md:19
+msgid "以下の単語が予約語として登録されています。"
+msgstr ""
+
+#: src\docs/keywords.md:20
+msgid "使用中の語"
+msgstr ""
+
+#: src\docs/keywords.md:21
+msgid ""
+"`null`, `true`, `false`, `each`, `for`, `loop`, `break`, `continue`, "
+"`match`, `case`, `default`, `if`, `elif`, `else`, `return`, `eval`, `var`, "
+"`let`, `exists`"
+msgstr ""
+
+#: src\docs/keywords.md:23
+msgid "使用予定の語"
+msgstr ""
+
+#: src\docs/keywords.md:24
+msgid ""
+"`as`, `async`, `attr`, `attribute`, `await`, `catch`, `class`, `component`, "
+"`constructor`, `dictionary`, `do`, `enum`, `export`, `finally`, `fn`, "
+"`hash`, `in`, `interface`, `out`, `private`, `public`, `ref`, `static`, "
+"`struct`, `table`, `this`, `throw`, `trait`, `try`, `undefined`, `use`, "
+"`using`, `when`, `while`, `yield`, `import`, `is`, `meta`, `module`, "
+"`namespace`, `new`"
+msgstr ""
+
+#: src\docs/std.md:1
+msgid "標準定数・標準関数について"
+msgstr "Standard Constants and Functions"
+
+#: src\docs/std.md:2
+#, fuzzy
+msgid ""
+"Aiscriptで最初から定義されていてどこでも使える定数・関数を指します。  \n"
+"standardを省略してstd定数/関数とも呼ばれています。"
+msgstr ""
+"Refers to constants and functions defined during initialization of the "
+"AiScript interpreter and can be used anywhere in the pt."
+
+#: src\docs/std.md:4 src\docs/builtin-props.md:11
+msgid "書式"
+msgstr "Format"
+
+#: src\docs/std.md:5 src\docs/std.md:24
+msgid "\\#Core:v"
+msgstr "\\#Core:v"
+
+#: src\docs/std.md:7
+msgid "`Core:v`という標準定数を表します。"
+msgstr "A prefix # indicates a std constant. In this case, the name is Core:v."
+
+#: src\docs/std.md:8 src\docs/std.md:28
+msgid "@Core:type(_v_: value): str"
+msgstr "@Core:type(_v_: value): str"
+
+#: src\docs/std.md:10
+msgid ""
+"`Core:type`という標準関数を表します。  \n"
+"`v`という名のvalue型（つまり任意の型）の引数を一つとり、str型（文字列型）の値"
+"を返します。"
+msgstr ""
+"A prefix `@` indicates a std function.  \n"
+"The example shown is a function called `Core:type`,  \n"
+"it takes one argument of type `value` (i.e., any type) named `v` and returns "
+"a value of type `str` (string type)."
+
+#: src\docs/std.md:15
+msgid "std"
+msgstr "std"
+
+#: src\docs/std.md:16
+msgid "@print(_message_: str): void"
+msgstr "@print(_message_: str): void"
+
+#: src\docs/std.md:17
+#, fuzzy
+msgid "画面に文字列を表示します。"
+msgstr ""
+"Outputs a string. (In most cases the string will be displayed on the screen, "
+"but behavior is up to the host implementation.)"
+
+#: src\docs/std.md:19
+msgid "@readline(_message_: str): str"
+msgstr "@readline(_message_: str): str"
+
+#: src\docs/std.md:20
+msgid "文字列の入力を受け付けます。"
+msgstr "Accepts input of character strings."
+
+#: src\docs/std.md:22
+msgid ":: Core"
+msgstr ":: Core"
+
+#: src\docs/std.md:25
+msgid ""
+"型: `str`  \n"
+"AiScriptのバージョンです。"
+msgstr ""
+"Type: `str`.  \n"
+"AiScript version."
+
+#: src\docs/std.md:29
+msgid "値の型名を取得します。"
+msgstr "Gets the type name of the value."
+
+#: src\docs/std.md:31
+msgid "@Core:to_str(_v_: value): str"
+msgstr "@Core:to_str(_v_: value): str"
+
+#: src\docs/std.md:32
+msgid "値を表す文字列を取得します。"
+msgstr "Gets a string representation of a value."
+
+#: src\docs/std.md:34
+msgid "@Core:sleep(_time_: num): void"
+msgstr "@Core:sleep(_time_: num): void"
+
+#: src\docs/std.md:35
+msgid "指定時間（ミリ秒）待機します。"
+msgstr "Waits for the specified time (milliseconds)."
+
+#: src\docs/std.md:37
+msgid "@Core:abort(_message_: str): never"
+msgstr "@Core:abort(_message_: str): never"
+
+#: src\docs/std.md:38
+msgid "プログラムを緊急停止します。"
+msgstr ""
+
+#: src\docs/std.md:40
+msgid ":: Util"
+msgstr ":: Util"
+
+#: src\docs/std.md:41
+msgid "@Util:uuid(): str"
+msgstr "@Util:uuid(): str"
+
+#: src\docs/std.md:42
+msgid "新しいUUIDを生成します。"
+msgstr "Generates a new UUID."
+
+#: src\docs/std.md:44
+msgid ":: Json"
+msgstr ":: Json"
+
+#: src\docs/std.md:45
+msgid "@Json:stringify(_v_: value): str"
+msgstr "@Json:stringify(_v_: value): str"
+
+#: src\docs/std.md:46
+msgid "JSONを生成します。"
+msgstr "Generates JSON from a value."
+
+#: src\docs/std.md:48
+msgid "@Json:parse(_json_: str): value"
+msgstr "@Json:parse(_json_: str): value"
+
+#: src\docs/std.md:49
+msgid ""
+"JSONをパースします。 引数がJSONとしてパース可能性でない場合、エラー型の値"
+"（`name`=`'not_json'`）を返します。"
+msgstr ""
+"Parses JSON into value. Returns an error type value (`name`=`'not_json'`) if "
+"the given string is not parsable as JSON."
+
+#: src\docs/std.md:51
+msgid "@Json:parsable(_str_: str): bool"
+msgstr "@Json:parsable(_str_: str): bool"
+
+#: src\docs/std.md:52
+msgid ""
+"文字列がJSONとしてパース可能であるかの判定を行います。歴史的理由により存在し"
+"ています"
+msgstr ""
+"Determines if a string can be parsed as JSON. Exists for historical reasons."
+
+#: src\docs/std.md:54
+msgid ":: Date"
+msgstr ":: Date"
+
+#: src\docs/std.md:55
+msgid "@Date:now(): num"
+msgstr "@Date:now(): num"
+
+#: src\docs/std.md:56
+#, fuzzy
+msgid "現在時刻を取得します。"
+msgstr ""
+"Gets the current time as a number for use in the functions below. "
+"Technically, the value is the same as when you use `Date.now()` in "
+"Javascript."
+
+#: src\docs/std.md:58
+msgid "@Date:year(_date_?: num): num"
+msgstr "@Date:year(_date_?: num): num"
+
+#: src\docs/std.md:59
+msgid ""
+"時刻の年を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する年、  \n"
+"渡していない場合は現在時刻の年が返されます。"
+msgstr ""
+
+#: src\docs/std.md:63
+msgid "@Date:month(_date_?: num): num"
+msgstr "@Date:month(_date_?: num): num"
+
+#: src\docs/std.md:64
+msgid ""
+"現在時刻の月を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する月、  \n"
+"渡していない場合は現在時刻の月が返されます。"
+msgstr ""
+
+#: src\docs/std.md:68
+msgid "@Date:day(_date_?: num): num"
+msgstr "@Date:day(_date_?: num): num"
+
+#: src\docs/std.md:69
+msgid ""
+"現在時刻の日を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する日、  \n"
+"渡していない場合は現在時刻の日が返されます。"
+msgstr ""
+
+#: src\docs/std.md:73
+msgid "@Date:hour(_date_?: num): num"
+msgstr "@Date:hour(_date_?: num): num"
+
+#: src\docs/std.md:74
+msgid ""
+"現在時刻の時を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する時、  \n"
+"渡していない場合は現在時刻の時が返されます。"
+msgstr ""
+
+#: src\docs/std.md:78
+msgid "@Date:minute(_date_?: num): num"
+msgstr "@Date:minute(_date_?: num): num"
+
+#: src\docs/std.md:79
+msgid ""
+"現在時刻の分を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する分、  \n"
+"渡していない場合は現在時刻の分が返されます。"
+msgstr ""
+
+#: src\docs/std.md:83
+msgid "@Date:second(_date_?: num): num"
+msgstr "@Date:second(_date_?: num): num"
+
+#: src\docs/std.md:84
+msgid ""
+"現在時刻の秒を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応する秒、  \n"
+"渡していない場合は現在時刻の秒が返されます。"
+msgstr ""
+
+#: src\docs/std.md:88
+msgid "@Date:millisecond(_date_?: num): num"
+msgstr "@Date:millisecond(_date_?: num): num"
+
+#: src\docs/std.md:89
+msgid ""
+"現在時刻のミリ秒を取得します。  \n"
+"_date_ を渡した場合、\\_date_に対応するミリ秒、  \n"
+"渡していない場合は現在時刻のミリ秒が返されます。"
+msgstr ""
+
+#: src\docs/std.md:93
+msgid "@Date:parse(_date_: str): num"
+msgstr "@Date:parse(_date_: str): num"
+
+#: src\docs/std.md:94
+#, fuzzy
+msgid ""
+"日付として解釈可能な文字列から日時を表す数値を生成します。  \n"
+"解釈は[JavaScriptのDateコンストラクター](https://developer.mozilla.org/ja/"
+"docs/Web/JavaScript/Reference/Global_Objects/Date/Date)に依存します。  \n"
+"引数が日付として解釈可能でない場合、エラー型の値（`name`=`'not_date'`）を返し"
+"ます。"
+msgstr ""
+"If the string can be interpreted as a time, converts into the same format as "
+"`Date:now()`.  \n"
+"For conversion, it uses the JavaScript Date constructor internally."
+
+#: src\docs/std.md:99
+msgid "@Date:to_iso_str(_date_?: num, _time_offset_?: num): str"
+msgstr "@Date:to_iso_str(_date_?: num, _time_offset_?: num): str"
+
+#: src\docs/std.md:100
+msgid ""
+"_date_ を拡張表記のISO形式にした文字列を返します。  \n"
+"_date_ を渡していない場合は現在時刻を使用します。  \n"
+"_time_offset_ はUTCからの時差（分単位）を指定します。  \n"
+"_time_offset_ を渡していない場合はローカルのものを参照します。"
+msgstr ""
+
+#: src\docs/std.md:105
+msgid ":: Math"
+msgstr ":: Math"
+
+#: src\docs/std.md:106
+msgid "数が多いため専用のページになっています。→[std-math.md](std-math.md)"
+msgstr ""
+
+#: src\docs/std.md:108
+msgid ":: Num"
+msgstr ":: Num"
+
+#: src\docs/std.md:109
+msgid "@Num:from_hex(_hex_: str): num"
+msgstr "@Num:from_hex(_hex_: str): num"
+
+#: src\docs/std.md:110
+msgid "16進数の文字列から数値を生成します。"
+msgstr "Generates a hexadecimal string from a number."
+
+#: src\docs/std.md:112
+msgid ":: Str"
+msgstr ":: Str"
+
+#: src\docs/std.md:113
+msgid "\\#Str:lf"
+msgstr "\\#Str:lf"
+
+#: src\docs/std.md:114
+msgid ""
+"型: `str`  \n"
+"改行コード(LF)です。"
+msgstr ""
+"Type: `str`.  \n"
+"Newline code (LF)."
+
+#: src\docs/std.md:117
+msgid "@Str:lt(a: str, b: str): num"
+msgstr "@Str:lt(a: str, b: str): num"
+
+#: src\docs/std.md:118
+#, fuzzy
+msgid ""
+"a \\< b ならば -1、a == b ならば 0、a > b ならば 1 を返します。  \n"
+"arr.sortの比較関数として使用できます。"
+msgstr ""
+"Returns -1 if a < b, 0 if a == b, or 1 if a > b.  \n"
+"Using this as a comparison function for `arr.sort`, the array is sorted in "
+"ascending lexicographic order."
+
+#: src\docs/std.md:121
+msgid "@Str:gt(a: str, b: str): num"
+msgstr "@Str:gt(a: str, b: str): num"
+
+#: src\docs/std.md:122
+#, fuzzy
+msgid ""
+"a > b ならば -1、a == b ならば 0、a \\< b ならば 1 を返します。  \n"
+"arr.sortの比較関数として使用できます。"
+msgstr ""
+"Returns -1 if a > b, 0 if a == b, or 1 if a < b.  \n"
+"Using this as the comparison function for `arr.sort`, the array is sorted in "
+"descending lexicographic order."
+
+#: src\docs/std.md:125
+msgid "@Str:from_codepoint(codepoint: num): str"
+msgstr "@Str:from_codepoint(codepoint: num): str"
+
+#: src\docs/std.md:126
+msgid "Unicodeのコードポイントから文字を生成します。"
+msgstr "Generates character from unicode code point."
+
+#: src\docs/std.md:128
+msgid "_codepoint_ は 0 以上、10FFFF<sub>16</sub> 以下である必要があります。"
+msgstr ""
+"_codepoint_ must be greater than or equal to 0 and less than or equal to "
+"10FFFFFF<sub>16</sub>."
+
+#: src\docs/std.md:130
+msgid "@Str:from_unicode_codepoints(_codePoints_: `arr<num>`): str"
+msgstr "@Str:from_unicode_codepoints(_codePoints_: `arr<num>`): str"
+
+#: src\docs/std.md:131
+msgid ""
+"Unicodeのコードポイント列を表す数値の配列から文字を生成します。  \n"
+"\\_codePoints_の各要素は 0 以上、10FFFF<sub>16</sub> 以下である必要がありま"
+"す。"
+msgstr ""
+
+#: src\docs/std.md:134
+msgid "@Str:from_utf8_bytes(_bytes_: `arr<num>`): str"
+msgstr "@Str:from_utf8_bytes(_bytes_: `arr<num>`): str"
+
+#: src\docs/std.md:135
+msgid ""
+"UTF-8のバイト列を表す数値の配列から文字を生成します。  \n"
+"\\_bytes_の各要素は 0 以上、255 以下である必要があります。"
+msgstr ""
+
+#: src\docs/std.md:138
+msgid ":: Uri"
+msgstr ":: Uri"
+
+#: src\docs/std.md:139
+msgid "@Uri:encode_full(uri: str): str"
+msgstr "@Uri:encode_full(uri: str): str"
+
+#: src\docs/std.md:140
+msgid ""
+"uri をURIとしてエンコードした文字列を返します。以下の文字はエンコードされませ"
+"ん。  \n"
+"`A-Z a-z 0-9 - _ . ! ~ * ' ( ) ; , / ? : @ & = + $ #`"
+msgstr ""
+
+#: src\docs/std.md:143
+msgid "@Uri:encode_component(text: str): str"
+msgstr "@Uri:encode_component(text: str): str"
+
+#: src\docs/std.md:144
+msgid ""
+"text をURI構成要素としてエンコードした文字列を返します。以下の文字はエンコー"
+"ドされません。  \n"
+"`A-Z a-z 0-9 - _ . ! ~ * ' ( )`"
+msgstr ""
+
+#: src\docs/std.md:147
+msgid "@Uri:decode_full(encoded_uri: str): str"
+msgstr "@Uri:decode_full(encoded_uri: str): str"
+
+#: src\docs/std.md:148
+msgid ""
+"encoded_uri をエンコードされたURIとしてデコードした文字列を返します。  \n"
+"以下の文字に対応するエスケープシーケンスはデコードされません。  \n"
+"`; , / ? : @ & = + $ #`"
+msgstr ""
+
+#: src\docs/std.md:152
+msgid "@Uri:decode_component(encoded_text: str): str"
+msgstr "@Uri:decode_component(encoded_text: str): str"
+
+#: src\docs/std.md:153
+msgid ""
+"encoded_text をエンコードされたURI構成要素としてデコードした文字列を返しま"
+"す。"
+msgstr ""
+
+#: src\docs/std.md:155
+msgid ":: Arr"
+msgstr ":: Arr"
+
+#: src\docs/std.md:156
+msgid "@Arr:create(_length_: num, _initial_?: value): arr"
+msgstr "@Arr:create(_length_: num, _initial_?: value): arr"
+
+#: src\docs/std.md:157
+msgid ""
+"長さが`length`の配列を作成します。  \n"
+"配列は _initial_ が与えられていれば _initial_ 、でなければ`null`で埋められま"
+"す。"
+msgstr ""
+
+#: src\docs/std.md:160
+msgid ":: Obj"
+msgstr ":: Obj"
+
+#: src\docs/std.md:161
+msgid "@Obj:keys(_v_: obj): arr"
+msgstr "@Obj:keys(_v_: obj): arr"
+
+#: src\docs/std.md:162
+msgid "@Obj:vals(_v_: obj): arr"
+msgstr "@Obj:vals(_v_: obj): arr"
+
+#: src\docs/std.md:163
+msgid "@Obj:kvs(_v_: obj): arr"
+msgstr "@Obj:kvs(_v_: obj): arr"
+
+#: src\docs/std.md:164
+msgid "オブジェクトのキー、値、キーと値の組を配列にして返します。"
+msgstr ""
+"Returns an array of object keys, values, and key/value pairs, respectively."
+
+#: src\docs/std.md:166
+msgid "@Obj:get(_v_: obj, _key_: str): value"
+msgstr "@Obj:get(_v_: obj, _key_: str): value"
+
+#: src\docs/std.md:168
+msgid "@Obj:set(_v_: obj, _key_: str, _val_: value): null"
+msgstr "@Obj:set(_v_: obj, _key_: str, _val_: value): null"
+
+#: src\docs/std.md:170
+msgid "@Obj:has(_v_: obj, _key_: str): bool"
+msgstr "@Obj:has(_v_: obj, _key_: str): bool"
+
+#: src\docs/std.md:172
+msgid "@Obj:copy(_v_: obj): obj"
+msgstr "@Obj:copy(_v_: obj): obj"
+
+#: src\docs/std.md:173
+msgid "オブジェクトのコピーを生成します。"
+msgstr "Generate a copy of the object."
+
+#: src\docs/std.md:175
+msgid "@Obj:merge(_o1_: obj, _o2_: obj): obj"
+msgstr ""
+
+#: src\docs/std.md:176
+msgid "２つのオブジェクトを併合したものを返します。"
+msgstr ""
+
+#: src\docs/std.md:178
+msgid ":: Error"
+msgstr ":: Error"
+
+#: src\docs/std.md:179
+msgid "@Error:create(_name_: str, _info_?: value): error"
+msgstr "@Error:create(_name_: str, _info_?: value): error"
+
+#: src\docs/std.md:180
+msgid "エラー型の値を作成します。"
+msgstr ""
+
+#: src\docs/std.md:182
+msgid ":: Async"
+msgstr ":: Async"
+
+#: src\docs/std.md:183
+msgid ""
+"@Async:interval(_interval_: num, _callback_: fn, _immediate_?: bool): fn"
+msgstr ""
+"@Async:interval(_interval_: num, _callback_: fn, _immediate_?: bool): fn"
+
+#: src\docs/std.md:184
+msgid ""
+"指定した周期でコールバック関数を呼び出します。  \n"
+"戻り値として停止関数を返します。"
+msgstr ""
+"Calls the callback function at the specified period.  \n"
+"Returns the stop function as a return value."
+
+#: src\docs/std.md:187
+msgid "@Async:timeout(_delay_: num, _callback_: fn):"
+msgstr "@Async:timeout(_delay_: num, _callback_: fn):"
+
+#: src\docs/std.md:188
+msgid ""
+"指定した時間経過後にコールバック関数を呼び出します。  \n"
+"戻り値として停止関数を返します。"
+msgstr ""
+"Calls the callback function after the specified time has elapsed.  \n"
+"Returns the stop function as a return value."
+
+#: src\docs/std-math.md:2
+msgid ""
+"数学・数値計算関連の標準定数・関数には`Math:`の名前空間が付与されています。"
+msgstr ""
+
+#: src\docs/std-math.md:4
+msgid "定数"
+msgstr ""
+
+#: src\docs/std-math.md:5
+msgid "型は全て`num`です。"
+msgstr ""
+
+#: src\docs/std-math.md:19
+msgid "基本的な関数"
+msgstr ""
+
+#: src\docs/std-math.md:20
+msgid "@Math:abs(_x_: num): num"
+msgstr "@Math:abs(_x_: num): num"
+
+#: src\docs/std-math.md:21
+msgid "絶対値を計算します。"
+msgstr "Calculate the absolute value."
+
+#: src\docs/std-math.md:23
+msgid "@Math:sign(_x_: num): num"
+msgstr "@Math:sign(_x_: num): num"
+
+#: src\docs/std-math.md:24
+msgid ""
+"_x_ が正であれば1、負であれば-1、0または-0であればそのままの値を返しま"
+"す。  \n"
+"いずれでもなければNaNを返します。"
+msgstr ""
+
+#: src\docs/std-math.md:27
+msgid "@Math:round(_x_: num): num"
+msgstr "@Math:round(_x_: num): num"
+
+#: src\docs/std-math.md:28
+msgid "四捨五入して、もっとも近い整数を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:30
+msgid "@Math:ceil(_x_: num): num"
+msgstr "@Math:ceil(_x_: num): num"
+
+#: src\docs/std-math.md:31
+msgid "引数以上の最小の整数を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:33
+msgid "@Math:floor(_x_: num): num"
+msgstr "@Math:floor(_x_: num): num"
+
+#: src\docs/std-math.md:34
+msgid "引数以下の最大の整数を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:36
+msgid "@Math:trunc(_x_: num): num"
+msgstr "@Math:trunc(_x_: num): num"
+
+#: src\docs/std-math.md:37
+msgid "引数の小数部を切り捨て、整数部を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:39
+msgid "@Math:min(_a_: num, _b_: num): num"
+msgstr "@Math:min(_a_: num, _b_: num): num"
+
+#: src\docs/std-math.md:40
+msgid "小さい方の値を取得します。"
+msgstr "Get the smaller value."
+
+#: src\docs/std-math.md:42
+msgid "@Math:max(_a_: num, _b_: num): num"
+msgstr "@Math:max(_a_: num, _b_: num): num"
+
+#: src\docs/std-math.md:43
+msgid "大きい方の値を取得します。"
+msgstr "Get the larger value."
+
+#: src\docs/std-math.md:45
+msgid "@Math:sqrt(_x_: num): num"
+msgstr "@Math:sqrt(_x_: num): num"
+
+#: src\docs/std-math.md:46
+#, fuzzy
+msgid "正の平方根を計算します。"
+msgstr "Calculate the square root."
+
+#: src\docs/std-math.md:48
+msgid "@Math:cbrt(_x_: num): num"
+msgstr "@Math:cbrt(_x_: num): num"
+
+#: src\docs/std-math.md:49
+msgid "立方根を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:51
+msgid "@Math:hypot(_vs_: arr): num"
+msgstr "@Math:hypot(_vs_: arr): num"
+
+#: src\docs/std-math.md:52
+msgid "_vs_ の要素をそれぞれ自乗してから合計した値の正の平方根を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:54
+msgid "三角関数"
+msgstr ""
+
+#: src\docs/std-math.md:55
+msgid "角度の単位はラジアンです。"
+msgstr ""
+
+#: src\docs/std-math.md:56
+msgid "@Math:sin(_rad_: num): num"
+msgstr "@Math:sin(_rad_: num): num"
+
+#: src\docs/std-math.md:57
+msgid "正弦を計算します。"
+msgstr "Calculate the sine."
+
+#: src\docs/std-math.md:59
+msgid "@Math:cos(_rad_: num): num"
+msgstr "@Math:cos(_rad_: num): num"
+
+#: src\docs/std-math.md:60
+msgid "余弦を計算します。"
+msgstr "Calculate the cosine."
+
+#: src\docs/std-math.md:62
+msgid "@Math:tan(_rad_: num): num"
+msgstr "@Math:tan(_rad_: num): num"
+
+#: src\docs/std-math.md:63
+msgid "正接を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:65
+msgid "@Math:asin(_x_: num): num"
+msgstr "@Math:asin(_x_: num): num"
+
+#: src\docs/std-math.md:66
+msgid "逆正弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:68
+msgid "@Math:acos(_x_: num): num"
+msgstr "@Math:acos(_x_: num): num"
+
+#: src\docs/std-math.md:69
+msgid "逆余弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:71
+msgid "@Math:atan(_x_: num): num"
+msgstr "@Math:atan(_x_: num): num"
+
+#: src\docs/std-math.md:72
+msgid "逆正接を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:74
+msgid "@Math:atan2(_y_: num, _x_: num): num"
+msgstr "@Math:atan2(_y_: num, _x_: num): num"
+
+#: src\docs/std-math.md:75
+msgid ""
+"_y_ /_x_ の正接を返しますが、_x_ が負値の場合はπだけずれた値を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:77
+msgid "双曲線関数"
+msgstr ""
+
+#: src\docs/std-math.md:78
+msgid "@Math:sinh(_x_: num): num"
+msgstr "@Math:sinh(_x_: num): num"
+
+#: src\docs/std-math.md:79
+msgid "双曲線正弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:81
+msgid "@Math:cosh(_x_: num): num"
+msgstr "@Math:cosh(_x_: num): num"
+
+#: src\docs/std-math.md:82
+msgid "双曲線余弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:84
+msgid "@Math:tanh(_x_: num): num"
+msgstr "@Math:tanh(_x_: num): num"
+
+#: src\docs/std-math.md:85
+msgid "双曲線正接を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:87
+msgid "@Math:asinh(_x_: num): num"
+msgstr "@Math:asinh(_x_: num): num"
+
+#: src\docs/std-math.md:88
+msgid "双曲線逆正弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:90
+msgid "@Math:acosh(_x_: num): num"
+msgstr "@Math:acosh(_x_: num): num"
+
+#: src\docs/std-math.md:91
+msgid "双曲線逆余弦を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:93
+msgid "@Math:atanh(_x_: num): num"
+msgstr "@Math:atanh(_x_: num): num"
+
+#: src\docs/std-math.md:94
+msgid "双曲線逆正接を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:96
+msgid "指数・対数関数"
+msgstr ""
+
+#: src\docs/std-math.md:97
+msgid "@Math:pow(_x_: num, _y_: num): num"
+msgstr "@Math:pow(_x_: num, _y_: num): num"
+
+#: src\docs/std-math.md:98
+msgid ""
+"_x_ の _y_ 乗を計算します。内部的にJavascriptの`**`演算子ではなく`Math.pow`関"
+"数を用いている点を除き、ほぼ`Core:pow`と同じものです。"
+msgstr ""
+
+#: src\docs/std-math.md:100
+msgid "@Math:exp(_x_: num): num"
+msgstr "@Math:exp(_x_: num): num"
+
+#: src\docs/std-math.md:101
+msgid "eの _x_ 乗を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:103
+msgid "@Math:expm1(_x_: num): num"
+msgstr "@Math:expm1(_x_: num): num"
+
+#: src\docs/std-math.md:104
+msgid "eの _x_ 乗から1を引いた値を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:105
+msgid "@Math:log(_x_: num): num"
+msgstr "@Math:log(_x_: num): num"
+
+#: src\docs/std-math.md:106
+msgid "自然対数を計算します。**常用対数には`Math:log10`を使用して下さい。**"
+msgstr ""
+
+#: src\docs/std-math.md:108
+msgid "@Math:log1p(_x_: num): num"
+msgstr "@Math:log1p(_x_: num): num"
+
+#: src\docs/std-math.md:109
+msgid "_x_ +1の自然対数を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:111
+msgid "@Math:log10(_x_: num): num"
+msgstr "@Math:log10(_x_: num): num"
+
+#: src\docs/std-math.md:112
+msgid "10を底とした対数を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:114
+msgid "@Math:log2(_x_: num): num"
+msgstr "@Math:log2(_x_: num): num"
+
+#: src\docs/std-math.md:115
+msgid "2を底とした対数を計算します。"
+msgstr ""
+
+#: src\docs/std-math.md:117
+msgid "乱数"
+msgstr ""
+
+#: src\docs/std-math.md:118
+msgid "@Math:rnd(_min_?: num, _max_?: num): num"
+msgstr "@Math:rnd(_min_?: num, _max_?: num): num"
+
+#: src\docs/std-math.md:119
+#, fuzzy
+msgid ""
+"乱数を生成します。  \n"
+"_min_ および _max_ を渡した場合、_min_ \\<= x, x \\<= _max_ の整数、  \n"
+"渡していない場合は 0 \\<= x, x \\< 1 の 小数が返されます。"
+msgstr "Generate a random number."
+
+#: src\docs/std-math.md:123
+msgid ""
+"@Math:gen_rng(_seed_: num | str, _options_?: obj): @(_min_?: num, _max_?: "
+"num)"
+msgstr ""
+"@Math:gen_rng(_seed_: num | str, _options_?: obj): @(_min_?: num, _max_?: "
+"num)"
+
+#: src\docs/std-math.md:124
+msgid ""
+"シードから乱数生成機を生成します。  \n"
+"生成された乱数生成器は、_min_ および _max_ を渡した場合、_min_ \\<= x, x "
+"\\<= _max_ の整数、  \n"
+"渡していない場合は 0 \\<= x, x \\< 1 の浮動小数点数を返します。  \n"
+"_options_ に渡したオブジェクトを通じて、内部の挙動を指定できます。  \n"
+"`options.algorithm`の指定による挙動の変化は下記の通りです。"
+msgstr ""
+
+#: src\docs/std-math.md:129
+msgid "`options.algorithm`"
+msgstr ""
+
+#: src\docs/std-math.md:129
+msgid "内部の乱数生成アルゴリズム"
+msgstr ""
+
+#: src\docs/std-math.md:129
+msgid "範囲指定整数生成アルゴリズム"
+msgstr ""
+
+#: src\docs/std-math.md:131
+msgid "`rc4`"
+msgstr ""
+
+#: src\docs/std-math.md:131 src\docs/std-math.md:132
+msgid "RC4"
+msgstr ""
+
+#: src\docs/std-math.md:131 src\docs/std-math.md:133
+msgid "Rejection Sampling"
+msgstr ""
+
+#: src\docs/std-math.md:132
+msgid "`rc4_legacy`"
+msgstr ""
+
+#: src\docs/std-math.md:132
+msgid "浮動小数点数演算による範囲制限​(0.19.0以前のアルゴリズム)"
+msgstr ""
+
+#: src\docs/std-math.md:133
+msgid "無指定 または 'chacha20'"
+msgstr ""
+
+#: src\docs/std-math.md:133
+msgid "ChaCha20"
+msgstr ""
+
+#: src\docs/std-math.md:135
+msgid ""
+"\\[!CAUTION\\] `rc4_legacy`等、浮動小数点数演算を伴う範囲指定整数生成アルゴリ"
+"ズムでは、演算時の丸め誤差により、指定した _max_ の値より大きな値が生成される"
+"可能性があります。"
+msgstr ""
+
+#: src\docs/std-math.md:138
+msgid "その他"
+msgstr ""
+
+#: src\docs/std-math.md:139
+msgid "@Math:clz32(_x_: num): num"
+msgstr "@Math:clz32(_x_: num): num"
+
+#: src\docs/std-math.md:140
+msgid "xを32ビットのバイナリで表現したときの先頭の0の個数を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:142
+msgid "@Math:fround(_x_: num): num"
+msgstr "@Math:fround(_x_: num): num"
+
+#: src\docs/std-math.md:143
+msgid "_x_ を32ビットの浮動小数点数に変換した時の値を返します。"
+msgstr ""
+
+#: src\docs/std-math.md:145
+msgid "@Math:imul(_x_: num, _y_: num): num"
+msgstr "@Math:imul(_x_: num, _y_: num): num"
+
+#: src\docs/std-math.md:146
+msgid "_x_ と _y_ に対しC言語風の32ビット乗算を行った結果を返します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:1
+#, fuzzy
+msgid ""
+"組み込みプロパティとは、型ごとに用意された特殊な値あるいは関数です。  \n"
+"オブジェクトのプロパティのように`.<name>`の記法で呼び出すことができます。"
+"（`[<str>]`の記法は使えません）"
+msgstr ""
+"A built-in property is a special value or function for specific type that "
+"can be called in the same notation as an object property."
+
+#: src\docs/builtin-props.md:4
+msgid "// 例"
+msgstr "// example"
+
+#: src\docs/builtin-props.md:4
+msgid "'ai kawaii'"
+msgstr "'ai kawaii'"
+
+#: src\docs/builtin-props.md:5
+msgid "//9"
+msgstr "//9"
+
+#: src\docs/builtin-props.md:7
+msgid "//[0,1,2,4]"
+msgstr "//[0,1,2,4]"
+
+#: src\docs/builtin-props.md:9
+msgid ""
+"今の所、数値・文字列・配列・エラー型に対応するものが用意されています。オブ"
+"ジェクトのそれに相当するものは、記法との兼ね合いで[std関数](std.md#-obj)とし"
+"て実装されています。"
+msgstr ""
+"Currently, built-in properties for types number, string, array, and error "
+"are available.  \n"
+"The object equivalent is implemented as [std function](std.md#-obj) due to a "
+"conflict of notation."
+
+#: src\docs/builtin-props.md:12
+msgid ""
+"本ページでは、（型名）型の任意の値に対する組み込みプロパティを下記のような形"
+"式で表記します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:13
+msgid ""
+"\\#(_v_: 型名).プロパティ名  \n"
+"// または  \n"
+"@(_v_: 型名).組み込みメソッド名(引数リスト): 返り値の型"
+msgstr ""
+
+#: src\docs/builtin-props.md:17
+#, fuzzy
+msgid ""
+"\\#から始まるものは関数以外の値を持つ組み込みプロパティです。 @から始まるもの"
+"は関数の組み込みプロパティ（組み込みメソッド）です。"
+msgstr ""
+"Prefix # indicates it is a primitive property that is not a function. Prefix "
+"@ indicates it is a primitive property that is a function."
+
+#: src\docs/builtin-props.md:21
+msgid "@(_x_: num).to_str(): str"
+msgstr "@(_x_: num).to_str(): str"
+
+#: src\docs/builtin-props.md:22
+msgid "数値を文字列に変換します。"
+msgstr "Gets string representation of the number."
+
+#: src\docs/builtin-props.md:24
+msgid "@(_x_: num).to_hex(): str"
+msgstr "@(_x_: num).to_hex(): str"
+
+#: src\docs/builtin-props.md:25
+msgid "数値から16進数の文字列を生成します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:28
+msgid "\\#(_v_: str).len"
+msgstr "\\#(_v_: str).len"
+
+#: src\docs/builtin-props.md:29
+#, fuzzy
+msgid ""
+"型: `num`  \n"
+"文字列の長さを取得します。"
+msgstr ""
+"type: `num`  \n"
+"Length of the string."
+
+#: src\docs/builtin-props.md:32
+msgid "@(_v_: str).to_num(): num | null"
+msgstr "@(_v_: str).to_num(): num | null"
+
+#: src\docs/builtin-props.md:33
+#, fuzzy
+msgid "文字列が数字であれば、数値に変換します。"
+msgstr "Gets the numeric value that the string represents."
+
+#: src\docs/builtin-props.md:35
+msgid "@(_v_: str).to_arr(): `arr<str>`"
+msgstr "@(_v_: str).to_arr(): `arr<str>`"
+
+#: src\docs/builtin-props.md:36
+msgid ""
+"文字列を書記素クラスタ毎に区切り、配列にしたものを返します。  \n"
+"文字列に孤立サロゲートが含まれない場合、孤立サロゲートを返すことはありませ"
+"ん。"
+msgstr ""
+
+#: src\docs/builtin-props.md:39
+msgid "@(_v_: str).to_unicode_arr(): `arr<str>`"
+msgstr "@(_v_: str).to_unicode_arr(): `arr<str>`"
+
+#: src\docs/builtin-props.md:40
+msgid ""
+"文字列を Unicode コードポイント毎に区切り、配列にしたものを返します。  \n"
+"書記素クラスタは分割されます。  \n"
+"文字列に孤立サロゲートが含まれない場合、孤立サロゲートを返すことはありませ"
+"ん。"
+msgstr ""
+
+#: src\docs/builtin-props.md:44
+msgid "@(_v_: str).to_unicode_codepoint_arr(): `arr<num>`"
+msgstr "@(_v_: str).to_unicode_codepoint_arr(): `arr<num>`"
+
+#: src\docs/builtin-props.md:45
+msgid ""
+"文字列を Unicode コードポイント毎に区切り、それぞれ[コードポイント](https://"
+"developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/"
+"codePointAt)値を取得し配列にしたものを返します。  \n"
+"文字列に孤立サロゲートが含まれない場合、孤立サロゲートを返すことはありませ"
+"ん。"
+msgstr ""
+
+#: src\docs/builtin-props.md:48
+msgid "@(_v_: str).to_char_arr(): `arr<str>`"
+msgstr "@(_v_: str).to_char_arr(): `arr<str>`"
+
+#: src\docs/builtin-props.md:49
+msgid ""
+"文字列を UTF-16 コード単位毎に区切り、配列にしたものを返します。  \n"
+"文字列にサロゲートペアが含まれる場合、上位と下位それぞれ孤立サロゲートを返し"
+"ます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:52
+msgid "@(_v_: str).to_charcode_arr(): `arr<num>`"
+msgstr "@(_v_: str).to_charcode_arr(): `arr<num>`"
+
+#: src\docs/builtin-props.md:53
+msgid ""
+"文字列を UTF-16 コード単位毎に区切り、それぞれ[UTF-16 コード単位を表す `0` か"
+"ら `65535` までの整数](https://developer.mozilla.org/ja/docs/Web/JavaScript/"
+"Reference/Global_Objects/String/charCodeAt)を取得し配列にしたものを返しま"
+"す。  \n"
+"文字列にサロゲートペアが含まれる場合、上位と下位それぞれ孤立サロゲートを返し"
+"ます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:56
+msgid "@(_v_: str).to_utf8_byte_arr(): `arr<num>`"
+msgstr "@(_v_: str).to_utf8_byte_arr(): `arr<num>`"
+
+#: src\docs/builtin-props.md:57
+msgid ""
+"文字列を UTF-8 エンコードし、各バイト毎の `0` から `255` までの整数値を取得し"
+"配列にしたものを返します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:59
+msgid "@(_v_: str).pick(_i_: num): str | null"
+msgstr "@(_v_: str).pick(_i_: num): str | null"
+
+#: src\docs/builtin-props.md:60
+msgid "文字列中の _i_ 番目の文字を取得します。"
+msgstr "Gets the character at _i_ ."
+
+#: src\docs/builtin-props.md:62
+msgid "@(_v_: str).incl(_keyword_: str): bool"
+msgstr "@(_v_: str).incl(_keyword_: str): bool"
+
+#: src\docs/builtin-props.md:63
+#, fuzzy
+msgid ""
+"文字列中に _keyword_ が含まれていれば`true`、なければ`false`を返します。"
+msgstr "Checks for the presence of _keyword_ in the string."
+
+#: src\docs/builtin-props.md:65
+msgid "@(_v_: str).starts_with(_prefix_: str, _start\\_index_?: num): bool"
+msgstr "@(_v_: str).starts_with(_prefix_: str, _start\\_index_?: num): bool"
+
+#: src\docs/builtin-props.md:66
+msgid ""
+"文字列が _prefix_ で始まっていれば`true`、そうでなければ`false`を返しま"
+"す。  \n"
+"_prefix_ が空文字列の場合は常に`true`を返します。  \n"
+"_start\\_index_ が指定されている場合、そのインデックスから始めます。  \n"
+"_start\\_index_ が`v.len`より大きいか`-v.len`より小さい場合は`false`を返しま"
+"す。  \n"
+"_start\\_index_ が負の場合は末尾から数えます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:72
+msgid "@(_v_: str).ends_with(_suffix_: str, _end\\_index_?: num): bool"
+msgstr "@(_v_: str).ends_with(_suffix_: str, _end\\_index_?: num): bool"
+
+#: src\docs/builtin-props.md:73
+msgid ""
+"文字列が _suffix_ で終わっていれば`true`、そうでなければ`false`を返しま"
+"す。  \n"
+"_suffix_ が空文字列の場合は常に`true`を返します。  \n"
+"_end\\_index_ が指定されている場合、そのインデックスの直前を末尾とします。"
+"（省略時は`v.len`）  \n"
+"_end\\_index_ が`v.len`より大きいか`-v.len`より小さい場合は`false`を返しま"
+"す。  \n"
+"_end\\_index_ が負の場合は末尾から数えます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:79
+msgid "@(_v_: str).slice(_begin_: num, _end_: num): str"
+msgstr "@(_v_: str).slice(_begin_: num, _end_: num): str"
+
+#: src\docs/builtin-props.md:80
+#, fuzzy
+msgid "文字列の _begin_ 番目から _end_ 番目の直前までの部分を取得します。"
+msgstr "Obtains specified portion of the string."
+
+#: src\docs/builtin-props.md:82
+msgid "@(_v_: str).split(_splitter_?: str): arr<str>"
+msgstr "@(_v_: str).split(_splitter_?: str): arr<str>"
+
+#: src\docs/builtin-props.md:83
+#, fuzzy
+msgid ""
+"文字列を _splitter_ がある場所で区切り、配列にしたものを返します。  \n"
+"_splitter_ が与えられなければ一文字づつ区切ります。"
+msgstr ""
+"Returns the string separated into array at the point where the _splitter_ is "
+"located."
+
+#: src\docs/builtin-props.md:86
+msgid "@(_v_: str).replace(_old_: str, _new_: str): str"
+msgstr "@(_v_: str).replace(_old_: str, _new_: str): str"
+
+#: src\docs/builtin-props.md:87
+msgid "文字列中の _old_ を _new_ に置換したものを返します。"
+msgstr "Returns the string with including _old_ (s) replaced with _new_."
+
+#: src\docs/builtin-props.md:89
+msgid "@(_v_: str).index_of(_search_: str, _fromIndex_?: num): num"
+msgstr "@(_v_: str).index_of(_search_: str, _fromIndex_?: num): num"
+
+#: src\docs/builtin-props.md:90
+#, fuzzy
+msgid ""
+"文字列中から_search_を探し、その添字を返します。  \n"
+"\\_fromIndex_が指定されていれば、その位置から検索を開始します。  \n"
+"\\_fromIndex_が負値の時は末尾からの位置（文字列の長さ+_fromIndex_）が使用され"
+"ます。  \n"
+"該当が無ければ-1を返します。"
+msgstr "Searches for _search_ in the string and returns its index."
+
+#: src\docs/builtin-props.md:95
+msgid "@(_v_: str).pad_start(_width_: num, _pad_?: str): str"
+msgstr "@(_v_: str).pad_start(_width_: num, _pad_?: str): str"
+
+#: src\docs/builtin-props.md:96
+msgid ""
+"文字列の長さがが _width_ になるように、先頭を _pad_ の繰り返しで埋めた新しい"
+"文字列を返します。  \n"
+"_pad_ を省略した場合、空白`' '`で埋められます。  \n"
+"_pad_ が長すぎる場合、_pad_ の末尾が切り捨てられます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:100
+msgid "@(_v_: str).pad_end(_width_: num, _pad_?: str): str"
+msgstr "@(_v_: str).pad_end(_width_: num, _pad_?: str): str"
+
+#: src\docs/builtin-props.md:101
+msgid ""
+"文字列の長さがが _width_ になるように、末尾を _pad_ の繰り返しで埋めた新しい"
+"文字列を返します。  \n"
+"_pad_ を省略した場合、空白`' '`で埋められます。  \n"
+"_pad_ が長すぎる場合、_pad_ の末尾が切り捨てられます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:105
+msgid "@(_v_: str).trim(): str"
+msgstr "@(_v_: str).trim(): str"
+
+#: src\docs/builtin-props.md:106
+msgid "文字列の前後の空白を取り除いたものを返します。"
+msgstr "Returns the string with leading and trailing whitespace removed."
+
+#: src\docs/builtin-props.md:108
+msgid "@(_v_: str).upper(): str"
+msgstr "@(_v_: str).upper(): str"
+
+#: src\docs/builtin-props.md:109
+#, fuzzy
+msgid "文字列中の英字を大文字に変換して返します。"
+msgstr "Returns the string converted to uppercase."
+
+#: src\docs/builtin-props.md:111
+msgid "@(_v_: str).lower(): str"
+msgstr "@(_v_: str).lower(): str"
+
+#: src\docs/builtin-props.md:112
+#, fuzzy
+msgid "文字列中の英字を小文字に変換して返します。"
+msgstr "Returns the string converted to lowercase."
+
+#: src\docs/builtin-props.md:114
+msgid "@(_v_: str).charcode_at(_i_: num): num | null"
+msgstr "@(_v_: str).charcode_at(_i_: num): num | null"
+
+#: src\docs/builtin-props.md:115
+msgid ""
+"_i_ 番目のにある [UTF-16 コード単位を表す `0` から `65535` までの整数]"
+"(https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/"
+"Global_Objects/String/charCodeAt)を返します。  \n"
+"インデックスは UTF-16 コード単位に基づきます。  \n"
+"文字列にサロゲートペアが含まれる場合、位置によって上位または下位の孤立サロ"
+"ゲートを返すことがあります。  \n"
+"_i_ 番目の文字が存在しない場合は null が返されます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:120
+msgid "@(_v_: str).codepoint_at(_i_: num): num | null"
+msgstr "@(_v_: str).codepoint_at(_i_: num): num | null"
+
+#: src\docs/builtin-props.md:121
+#, fuzzy
+msgid ""
+"_i_ 番目の文字の[コードポイント](https://developer.mozilla.org/ja/docs/Web/"
+"JavaScript/Reference/Global_Objects/String/codePointAt)を取得します。  \n"
+"インデックスは UTF-16 コード単位に基づきます。  \n"
+"文字列にサロゲートペアが含まれ、指定位置が下位のサロゲートである場合、下位の"
+"孤立サロゲートを返します。  \n"
+"_i_ 番目の文字が存在しない場合は null が返されます。"
+msgstr ""
+"Gets the codepoint of the character at _i_.  \n"
+"Returns null if the character does not exist there."
+
+#: src\docs/builtin-props.md:127
+msgid "\\#(_v_: arr).len"
+msgstr "\\#(_v_: arr).len"
+
+#: src\docs/builtin-props.md:128
+#, fuzzy
+msgid ""
+"型: `num`  \n"
+"配列の要素数を取得します。"
+msgstr ""
+"type: `num`  \n"
+"Number of elements in the array."
+
+#: src\docs/builtin-props.md:131
+msgid "@(_v_: arr).at(_index_: num, _otherwise_?: value): value"
+msgstr "@(_v_: arr).at(_index_: num, _otherwise_?: value): value"
+
+#: src\docs/builtin-props.md:132
+msgid ""
+"配列の _index_ の位置の要素を返します。  \n"
+"_index_ が負の場合は末尾から数えます。  \n"
+"_index_ が範囲外の場合は、代わりに _otherwise_ を返します。  \n"
+"_otherwise_ が省略されている場合は`null`になります。"
+msgstr ""
+
+#: src\docs/builtin-props.md:137
+msgid "@(_v_: arr).push(_i_: value): null"
+msgstr "@(_v_: arr).push(_i_: value): null"
+
+#: src\docs/builtin-props.md:138
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の最後に要素を追加します。"
+msgstr ""
+"**MODIFIES THE ARRAY**  \n"
+"Appends an element to the end of the array."
+
+#: src\docs/builtin-props.md:141
+msgid "@(_v_: arr).unshift(i: value): null"
+msgstr "@(_v_: arr).unshift(i: value): null"
+
+#: src\docs/builtin-props.md:142
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の最初に要素を追加します。"
+msgstr ""
+"**MODIFIES THE ARRAY**  \n"
+"Prepends an element to the beginning of the array."
+
+#: src\docs/builtin-props.md:145
+msgid "@(_v_: arr).pop(): value"
+msgstr "@(_v_: arr).pop(): value"
+
+#: src\docs/builtin-props.md:146
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の最後の要素を取り出します。"
+msgstr ""
+"**MODIFIES THE ARRAY**  \n"
+"Extracts the last element of the array."
+
+#: src\docs/builtin-props.md:149
+msgid "@(_v_: arr).shift(): value"
+msgstr "@(_v_: arr).shift(): value"
+
+#: src\docs/builtin-props.md:150
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の最初の要素を取り出します。"
+msgstr ""
+"**MODIFIES THE ARRAY**  \n"
+"Extracts the first element of the array."
+
+#: src\docs/builtin-props.md:153
+msgid "@(_a_: arr).concat(_b_: arr): arr"
+msgstr "@(_a_: arr).concat(_b_: arr): arr"
+
+#: src\docs/builtin-props.md:154
+#, fuzzy
+msgid "配列を連結します。"
+msgstr "Returns an array concatenating the array and _b_."
+
+#: src\docs/builtin-props.md:156
+msgid "@(_v_: arr<str>).join(_joiner_?: str): str"
+msgstr "@(_v_: arr<str>).join(_joiner_?: str): str"
+
+#: src\docs/builtin-props.md:157
+msgid "文字列の配列を結合して一つの文字列として返します。"
+msgstr ""
+"Combines all elements of the string array and returns them as a single "
+"string."
+
+#: src\docs/builtin-props.md:159
+msgid "@(_v_: arr).slice(_begin_: num, _end_: num): arr"
+msgstr "@(_v_: arr).slice(_begin_: num, _end_: num): arr"
+
+#: src\docs/builtin-props.md:160
+msgid "配列の _begin_ 番目から _end_ 番目の部分を切り出して返します。"
+msgstr "Obtains the specified portion of the array."
+
+#: src\docs/builtin-props.md:162
+msgid "@(_v_: arr).incl(_i_: value): bool"
+msgstr "@(_v_: arr).incl(_i_: value): bool"
+
+#: src\docs/builtin-props.md:163
+msgid "配列に指定した値が含まれているかどうかを返します。"
+msgstr "Checks if there is an element in the array with the value _val_."
+
+#: src\docs/builtin-props.md:165
+msgid "@(_v_: arr).map(_func_: fn): arr"
+msgstr "@(_v_: arr).map(_func_: fn): arr"
+
+#: src\docs/builtin-props.md:166
+#, fuzzy
+msgid ""
+"配列の各要素に対し _func_ を非同期的に呼び出します。 それぞれの要素を _func_ "
+"の返り値で置き換えたものを返します。"
+msgstr ""
+"Executes _func_ for each element of the array asynchronously. Returns the "
+"array of results."
+
+#: src\docs/builtin-props.md:169
+msgid "@(_v_: arr).filter(_func_: fn): arr"
+msgstr "@(_v_: arr).filter(_func_: fn): arr"
+
+#: src\docs/builtin-props.md:170
+#, fuzzy
+msgid ""
+"配列の要素のうち _func_ が true を返すようなもののみを抜き出して返しま"
+"す。  \n"
+"順序は維持されます。"
+msgstr ""
+"Executes _func_ for each element of the array asynchronously.  \n"
+"Returns only those elements of the array for which _func_ returns true."
+
+#: src\docs/builtin-props.md:173
+msgid "@(_v_: arr).reduce(_func_: Callback, _initial_: value): value"
+msgstr "@(_v_: arr).reduce(_func_: Callback, _initial_: value): value"
+
+#: src\docs/builtin-props.md:174
+#, fuzzy
+msgid ""
+"`Callback`: @(_acm_: value, _item_: value, _index_: num): value  \n"
+"配列の各要素に対し _func_ を順番に呼び出します。  \n"
+"各呼び出しでは、前回の結果が第1引数 _acm_ として渡されます。  \n"
+"_initial_ が指定された場合は初回呼び出しの引数が(_initial_, _v_\\[0\\], "
+"0)、  \n"
+"指定されなかった場合は(_v_\\[0\\], _v_\\[1\\], 1)となります。  \n"
+"配列が空配列であり、かつ _initial_ が指定されていない場合はエラーになります。"
+"従って基本的には _initial_ を指定しておくことが推奨されています。"
+msgstr ""
+"Executes _func_ for each element in turn.  \n"
+"_func_ is given the previous result as _acm_.  \n"
+"if _initial_ is given, _func_ is initially called with arguments (_initial_, "
+"_v_\\[0], 0).  \n"
+"Otherwise, (_v_\\[0], _v_\\[1], 1)."
+
+#: src\docs/builtin-props.md:181
+msgid ""
+"@(_v_: arr).find(_func_: @(_item_: value, _index_: num) { bool }): value"
+msgstr ""
+"@(_v_: arr).find(_func_: @(_item_: value, _index_: num) { bool }): value"
+
+#: src\docs/builtin-props.md:182
+msgid "配列から _func_ が true を返すような要素を探し、その値を返します。"
+msgstr "Finds elements in the array such that _func_ returns true."
+
+#: src\docs/builtin-props.md:184
+msgid "@(_v_: arr).index_of(_val_: value, _fromIndex_?: num): num"
+msgstr "@(_v_: arr).index_of(_val_: value, _fromIndex_?: num): num"
+
+#: src\docs/builtin-props.md:185
+msgid ""
+"配列から_val_と同じ値を探し、その添字を返します。  \n"
+"\\_fromIndex_が指定されていれば、その位置から検索を開始します。  \n"
+"\\_fromIndex_が負値の時は末尾からの位置（配列の長さ+_fromIndex_）が使用されま"
+"す。  \n"
+"該当が無ければ-1を返します。"
+msgstr ""
+"Finds a value that equals to _val_, and returns the index.  \n"
+"If _fromIndex_ is given, the search starts from there.  \n"
+"When _fromIndex_ is negative, the index from the end(length of the array + "
+"_fromIndex_) is used.  \n"
+"When not found, returns -1."
+
+#: src\docs/builtin-props.md:190
+msgid "@(_v_: arr).reverse(): null"
+msgstr "@(_v_: arr).reverse(): null"
+
+#: src\docs/builtin-props.md:191
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列を反転させます。"
+msgstr ""
+"**Modifying**\n"
+"Reverses the array."
+
+#: src\docs/builtin-props.md:194
+msgid "@(_v_: arr).copy(): arr"
+msgstr "@(_v_: arr).copy(): arr"
+
+#: src\docs/builtin-props.md:195
+#, fuzzy
+msgid ""
+"配列のコピーを生成します。  \n"
+"シャローコピーであり、配列やオブジェクトの参照は維持されます。"
+msgstr "Generates a copy of the array."
+
+#: src\docs/builtin-props.md:198
+msgid "@(_v_: arr).sort(_comp_: @(_a_: value, _b_: value)): arr"
+msgstr "@(_v_: arr).sort(_comp_: @(_a_: value, _b_: value)): arr"
+
+#: src\docs/builtin-props.md:199
+#, fuzzy
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の並べ替えをします。第1引数 _comp_ として次のような比較関数を渡しま"
+"す。  \n"
+"安定ソートです。"
+msgstr ""
+"**MODIFIES THE ARRAY***\n"
+"Sorts the array.  \n"
+"_comp_ is the comparison function that returns:"
+
+#: src\docs/builtin-props.md:202
+msgid "_a_ が _b_ より順番的に前の時、負の値を返す"
+msgstr "negative value if _a_ should precede _b_"
+
+#: src\docs/builtin-props.md:203
+msgid "_a_ が _b_ より順番的に後の時、正の値を返す"
+msgstr "positive value if _a_ should succeed _b_"
+
+#: src\docs/builtin-props.md:204
+msgid "_a_ が _b_ と順番的に同等の時、0を返す"
+msgstr "0 if either is acceptable"
+
+#: src\docs/builtin-props.md:206
+#, fuzzy
+msgid ""
+"数値の並び替えでは`Core:sub`を渡すことで昇順、`@(a,b){b-a}`を渡すことで降順"
+"ソートができます。  \n"
+"文字列用の比較関数として`Str:lt`（昇順）, `Str:gt`（降順）が用意されていま"
+"す。詳しくは[std.md](std.md#-str)をご覧下さい。"
+msgstr ""
+"`Str:lt` and `Str:gt` are available as comparison function. See [std.md](./"
+"std.md#-Str)"
+
+#: src\docs/builtin-props.md:209
+msgid ""
+"@(_v_: arr).fill(_val_?: value, _fromIndex_?: num, _toIndex_?: num): arr"
+msgstr ""
+"@(_v_: arr).fill(_val_?: value, _fromIndex_?: num, _toIndex_?: num): arr"
+
+#: src\docs/builtin-props.md:210
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の _fromIndex_ から _toIndex_ までの範囲の要素を _val_ で置き換えま"
+"す。  \n"
+"_val_ 省略時は`null`で置き換えます。  \n"
+"_fromIndex_ および _toIndex_ に関する挙動は`arr.slice`に準拠します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:215
+msgid "@(_v_: arr).repeat(_times_: num): arr"
+msgstr "@(_v_: arr).repeat(_times_: num): arr"
+
+#: src\docs/builtin-props.md:216
+msgid ""
+"配列を _times_ 回繰り返した配列を作成します。  \n"
+"`arr.copy`同様シャローコピーであり、配列やオブジェクトの参照は維持されま"
+"す。  \n"
+"_times_ には0以上の整数値を指定します。それ以外ではエラーになります。"
+msgstr ""
+
+#: src\docs/builtin-props.md:220
+msgid ""
+"@(_v_: arr).splice(_index_: num, _remove_count_?: num, _items_?: "
+"arr\\<value>): arr\\<value>"
+msgstr ""
+"@(_v_: arr).splice(_index_: num, _remove_count_?: num, _items_?: "
+"arr\\<value>): arr\\<value>"
+
+#: src\docs/builtin-props.md:221
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の _index_ から _remove_count_ 個の要素を取り除き、その位置に _items_ の"
+"要素を挿入します。  \n"
+"返り値として、取り除いた要素の配列を返します。  \n"
+"_index_ が負の場合は末尾から数えます。  \n"
+"_index_ が最後の要素より後の場合は要素を取り除かず、挿入は末尾に追加しま"
+"す。  \n"
+"_remove_count_ を省略した場合、末尾まで取り除きます。  \n"
+"_items_ を省略した場合、何も挿入しません。"
+msgstr ""
+
+#: src\docs/builtin-props.md:229
+msgid "@(_v_: arr).flat(_depth_?: num): arr"
+msgstr "@(_v_: arr).flat(_depth_?: num): arr"
+
+#: src\docs/builtin-props.md:230
+msgid ""
+"配列に含まれる配列を _depth_ で指定した深さの階層まで結合した新しい配列を作成"
+"します。  \n"
+"_depth_ には0以上の整数値を指定します。省略時は1になります。"
+msgstr ""
+
+#: src\docs/builtin-props.md:233
+msgid ""
+"@(_v_: arr).flat_map(_func_: @(_item_: value, _index_: num) { value }): arr"
+msgstr ""
+"@(_v_: arr).flat_map(_func_: @(_item_: value, _index_: num) { value }): arr"
+
+#: src\docs/builtin-props.md:234
+msgid ""
+"配列の各要素を _func_ の返り値で置き換えた後、1階層平坦化した新しい配列を作成"
+"します。  \n"
+"_func_ は非同期的に呼び出されます。"
+msgstr ""
+
+#: src\docs/builtin-props.md:237
+msgid "@(_v_: arr).insert(_index_: num, _item_: value): null"
+msgstr "@(_v_: arr).insert(_index_: num, _item_: value): null"
+
+#: src\docs/builtin-props.md:238
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列の _index_ の位置に _item_ を挿入します。  \n"
+"_index_ が負の場合は末尾から数えます。  \n"
+"_index_ が最後の要素より後の場合は末尾に追加します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:243
+msgid "@(_v_: arr).remove(_index_: num): value | null"
+msgstr "@(_v_: arr).remove(_index_: num): value | null"
+
+#: src\docs/builtin-props.md:244
+msgid ""
+"**【この操作は配列を書き換えます】**  \n"
+"配列から _index_ の位置の要素を取り除き、その要素を返します。  \n"
+"_index_ が負の場合は末尾から数えます。  \n"
+"_index_ が最後の要素より後の場合は取り除かず、`null`を返します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:249
+msgid ""
+"@(_v_: arr).every(_func_: @(_item_: value, _index_: num) { bool }): bool"
+msgstr ""
+"@(_v_: arr).every(_func_: @(_item_: value, _index_: num) { bool }): bool"
+
+#: src\docs/builtin-props.md:250
+msgid ""
+"配列の全ての要素に対して _func_ が true を返す時のみ true 返します。空配列に"
+"は常に true を返します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:252
+msgid "@(_v_: arr).some(_func_: @(_item_: value, _index_: num) { bool }): bool"
+msgstr ""
+"@(_v_: arr).some(_func_: @(_item_: value, _index_: num) { bool }): bool"
+
+#: src\docs/builtin-props.md:253
+msgid ""
+"配列の要素に対して _func_ が true を返す要素が存在する時のみ true 返します。"
+msgstr ""
+
+#: src\docs/builtin-props.md:256
+msgid "\\#(_v_: error).name"
+msgstr "\\#(_v_: error).name"
+
+#: src\docs/builtin-props.md:257
+#, fuzzy
+msgid ""
+"型: `str`  \n"
+"エラーの識別子となる文字列を取得します。"
+msgstr ""
+"type: `str`  \n"
+"Identifier string of the error."
+
+#: src\docs/builtin-props.md:260
+msgid "\\#(_v_: error).info"
+msgstr "\\#(_v_: error).info"
+
+#: src\docs/builtin-props.md:261
+#, fuzzy
+msgid ""
+"型: `value`  \n"
+"エラーに付加情報がある場合、それを取得します。"
+msgstr ""
+"type: `value`  \n"
+"Additional information about the error, if any."

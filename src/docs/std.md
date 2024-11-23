@@ -1,6 +1,3 @@
-*English translation has been left out of date for a long time. 
-[Please contribute!](../translations/en/docs/std.md)*
-
 ## 標準定数・標準関数について
 Aiscriptで最初から定義されていてどこでも使える定数・関数を指します。  
 standardを省略してstd定数/関数とも呼ばれています。

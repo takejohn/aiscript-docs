@@ -1,0 +1,20 @@
+/*
+ * This file is a modified copy of a part of Rust By Example
+ * MIT license (https://opensource.org/license/MIT)
+ * Copyright (c) 2014 Jorge Aparicio
+ * https://github.com/rust-lang/rust-by-example/blob/e1d1f2cdcee4d52b9a01ff7c448be4372a377b70/theme/css/language-picker.css
+ */
+
+#language-list {
+    left: auto;
+    right: 10px;
+}
+
+[dir="rtl"] #language-list {
+    left: 10px;
+    right: auto;
+}
+
+#language-list a {
+    color: inherit;
+}
