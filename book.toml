@@ -1,0 +1,6 @@
+[book]
+authors = ["takejohn"]
+language = "ja"
+multilingual = false
+src = "src"
+title = "AiScript Docs"
