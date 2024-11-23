@@ -9,7 +9,7 @@ AiScript(あいすくりぷと)は、プログラミング言語です。
 
 ## Hello, world!
 AiScriptでは、次のように書きます:
-```
+```aiscript,playground
 print("Hello, world!")
 ```
 
@@ -20,7 +20,7 @@ print("Hello, world!")
 `"~"`は文字列リテラルです。`"`で囲ったものが文字列になります。
 
 ちなみに、`print( ~ )`には糖衣構文があり、次のようにも書けます:
-```js
+```aiscript,playground
 <: "Hello, world!"
 ```
 
@@ -89,7 +89,7 @@ print(message)
 
 配列の要素にアクセスするときは、`[<index>]`と書きます。
 インデックスは0始まりです。
-```
+```aiscript,playground
 let arr = ["ai", "chan", "kawaii"]
 <: arr[0] // "ai"
 <: arr[2] // "kawaii"
@@ -113,7 +113,7 @@ AiScriptにおけるオブジェクトは文字列のみをキーとした連想
 
 オブジェクトのプロパティにアクセスするときは、
 `.<name>`か`[<str>]`と書きます。
-```
+```aiscript,playground
 let obj = {foo: "bar", answer: 42}
 <: obj.foo // "bar"
 <: obj["answer"] // 42
@@ -132,7 +132,7 @@ Core:add(1, 1)
 
 ## ブロック式
 ブロック式 `eval { ~ }` を使うと、ブロック内で最後に書かれた式が値として返されます。
-```
+```aiscript,playground
 let foo = eval {
 	let a = 1
 	let b = 2
@@ -144,7 +144,7 @@ let foo = eval {
 
 ## 条件分岐
 AiScriptでの条件分岐は、次のように書きます:
-```
+```aiscript,playground
 if (a == b) {
 	<: "a equals to b"
 }
@@ -152,7 +152,7 @@ if (a == b) {
 
 `if`の後にboolを返す式(条件)を書き、その後に条件に一致した場合に評価される式(then節)を書きます。
 then節の後に`else`を書き、さらに式を追加することで条件に一致しなかった場合の処理も行うことが出来ます:
-```
+```aiscript,playground
 if (a == b) {
 	<: "a equals to b"
 } else {
@@ -161,7 +161,7 @@ if (a == b) {
 ```
 
 `elif`の後に条件式を書くことで条件判定を複数行うことも出来ます:
-```
+```aiscript,playground
 if (a == b) {
 	<: "a equals to b"
 } elif (a > b) {
@@ -172,7 +172,7 @@ if (a == b) {
 ```
 
 これらの条件分岐は式なので、ブロック内で値を返せます:
-```
+```aiscript,playground
 <: if (a == b) {
 	"a equals to b"
 } elif (a > b) {
@@ -184,14 +184,14 @@ if (a == b) {
 
 ## 繰り返し
 AiScriptでの繰り返しは、次のように書きます:
-```
+```aiscript,playground
 for (let i, 100) {
 	<: i
 }
 ```
 `for`の後にイテレータ変数名を書き、`,`の後に繰り返し回数を返す式を書きます。その後のブロックで繰り返す処理を書きます。
 イテレータ変数は省略することも出来ます:
-```
+```aiscript,playground
 for (100) {
 	<: "yo"
 }
@@ -199,7 +199,7 @@ for (100) {
 
 ## 繰り返し(配列)
 `each`を使うと、配列の各アイテムに対し処理を繰り返すことができます:
-```
+```aiscript,playground
 let items = ["a", "b", "c"]
 each (let item, items) {
 	<: item
@@ -232,7 +232,7 @@ each (let item, items) {
 
 ## テンプレート
 バッククォートを使うと、文字列の中に変数や式を埋め込めます:
-```
+```aiscript,playground
 let ai = "kawaii"
 <: `Hello, {ai} world!`
 // 結果: Hello, kawaii world!
@@ -261,11 +261,11 @@ AiScriptファイルにメタデータを埋め込める機能です。
 
 ## エラーメッセージ
 進行不能なエラーが発生するとエラーメッセージが表示されます。  
-```
+```aiscript,playground
 let scores=[10, 8, 5, 5]
 let 3rd=scores[2] // unexpected token: NumberLiteral (Line 2, Column 5)
 ```
-```
+```aiscript,playground
 let arr=[]
 arr[0] // Runtime: Index out of range. Index: 0 max: -1 (Line 2, Column 4)
 ```

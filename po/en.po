@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AiScript Docs\n"
-"POT-Creation-Date: 2024-11-23T15:44:29+09:00\n"
+"POT-Creation-Date: 2024-11-24T01:40:50+09:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -81,8 +81,13 @@ msgid "AiScriptでは、次のように書きます:"
 msgstr "In AiScript, it is written as follows:"
 
 #: src\docs/get-started.md:12
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "print(\"Hello, world!\")\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "print(\"Hello, world!\")\n"
 "```"
 msgstr ""
@@ -111,9 +116,20 @@ msgstr ""
 "Incidentally, `print( ~ )` has a sugar-coated syntax and can be written as "
 "follows:"
 
-#: src\docs/get-started.md:24
-msgid "\"Hello, world!\""
-msgstr "\"Hello, world!\""
+#: src\docs/get-started.md:23
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "print(\"Hello, world!\")\n"
+#| "```"
+msgid ""
+"```aiscript,playground\n"
+"<: \"Hello, world!\"\n"
+"```"
+msgstr ""
+"```\n"
+"print(\"Hello, world!\")\n"
+"```"
 
 #: src\docs/get-started.md:27 src\docs/syntax.md:8
 msgid "コメント"
@@ -246,8 +262,15 @@ msgstr ""
 "To access an element of an array, write `[<index>]`. The index starts at 0."
 
 #: src\docs/get-started.md:92
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "let arr = [\"ai\", \"chan\", \"kawaii\"]\n"
+#| "<: arr[0] // \"ai\"\n"
+#| "<: arr[2] // \"kawaii\"\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let arr = [\"ai\", \"chan\", \"kawaii\"]\n"
 "<: arr[0] // \"ai\"\n"
 "<: arr[2] // \"kawaii\"\n"
@@ -303,12 +326,17 @@ msgstr ""
 
 #: src\docs/get-started.md:116
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let obj = {foo: \"bar\", answer: 42}\n"
 "<: obj.foo // \"bar\"\n"
 "<: obj[\"answer\"] // 42\n"
 "```"
 msgstr ""
+"```aiscript,playground\n"
+"let obj = {foo: \"bar\", answer: 42}\n"
+"<: obj.foo // \"bar\"\n"
+"<: obj[\"answer\"] // 42\n"
+"```"
 
 #: src\docs/get-started.md:122
 msgid "演算"
@@ -344,8 +372,19 @@ msgstr ""
 "the block."
 
 #: src\docs/get-started.md:135
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "let foo = eval {\n"
+#| "\tlet a = 1\n"
+#| "\tlet b = 2\n"
+#| "\t(a + b)\n"
+#| "}\n"
+#| "\n"
+#| "<: foo // 3\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let foo = eval {\n"
 "\tlet a = 1\n"
 "\tlet b = 2\n"
@@ -374,8 +413,15 @@ msgid "AiScriptでの条件分岐は、次のように書きます:"
 msgstr "The conditional branch in AiScript is written as follows:"
 
 #: src\docs/get-started.md:147
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "if (a == b) {\n"
+#| "\t<: \"a equals to b\"\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "if (a == b) {\n"
 "\t<: \"a equals to b\"\n"
 "}\n"
@@ -399,8 +445,17 @@ msgstr ""
 "the case when the condition is not met:"
 
 #: src\docs/get-started.md:155
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "if (a == b) {\n"
+#| "\t<: \"a equals to b\"\n"
+#| "} else {\n"
+#| "\t<: \"a does not equal to b\"\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "if (a == b) {\n"
 "\t<: \"a equals to b\"\n"
 "} else {\n"
@@ -423,8 +478,19 @@ msgstr ""
 "conditional decisions:"
 
 #: src\docs/get-started.md:164
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "if (a == b) {\n"
+#| "\t<: \"a equals to b\"\n"
+#| "} elif (a > b) {\n"
+#| "\t<: \"a is greater than b\"\n"
+#| "} else {\n"
+#| "\t<: \"a is less than b\"\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "if (a == b) {\n"
 "\t<: \"a equals to b\"\n"
 "} elif (a > b) {\n"
@@ -451,8 +517,19 @@ msgstr ""
 "the block:"
 
 #: src\docs/get-started.md:175
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "<: if (a == b) {\n"
+#| "\t\"a equals to b\"\n"
+#| "} elif (a > b) {\n"
+#| "\t\"a is greater than b\"\n"
+#| "} else {\n"
+#| "\t\"a is less than b\"\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "<: if (a == b) {\n"
 "\t\"a equals to b\"\n"
 "} elif (a > b) {\n"
@@ -492,8 +569,15 @@ msgstr ""
 "omitted:"
 
 #: src\docs/get-started.md:194
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "for (100) {\n"
+#| "\t<: \"yo\"\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "for (100) {\n"
 "\t<: \"yo\"\n"
 "}\n"
@@ -514,8 +598,16 @@ msgid "`each`を使うと、配列の各アイテムに対し処理を繰り返�
 msgstr "You can use `each` to repeat items in an array:"
 
 #: src\docs/get-started.md:202
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "let items = [\"a\", \"b\", \"c\"]\n"
+#| "each (let item, items) {\n"
+#| "\t<: item\n"
+#| "}\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let items = [\"a\", \"b\", \"c\"]\n"
 "each (let item, items) {\n"
 "\t<: item\n"
@@ -592,8 +684,15 @@ msgid "バッククォートを使うと、文字列の中に変数や式を埋�
 msgstr "You can embed variables and expressions in a string:"
 
 #: src\docs/get-started.md:235
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "let ai = \"kawaii\"\n"
+#| "<: `Hello, {ai} world!`\n"
+#| "// 結果: Hello, kawaii world!\n"
+#| "```"
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let ai = \"kawaii\"\n"
 "<: `Hello, {ai} world!`\n"
 "// 結果: Hello, kawaii world!\n"
@@ -652,19 +751,27 @@ msgstr ""
 
 #: src\docs/get-started.md:264
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let scores=[10, 8, 5, 5]\n"
 "let 3rd=scores[2] // unexpected token: NumberLiteral (Line 2, Column 5)\n"
 "```"
 msgstr ""
+"```aiscript,playground\n"
+"let scores=[10, 8, 5, 5]\n"
+"let 3rd=scores[2] // unexpected token: NumberLiteral (Line 2, Column 5)\n"
+"```"
 
 #: src\docs/get-started.md:268
 msgid ""
-"```\n"
+"```aiscript,playground\n"
 "let arr=[]\n"
 "arr[0] // Runtime: Index out of range. Index: 0 max: -1 (Line 2, Column 4)\n"
 "```"
 msgstr ""
+"```aiscript,playground\n"
+"let arr=[]\n"
+"arr[0] // Runtime: Index out of range. Index: 0 max: -1 (Line 2, Column 4)\n"
+"```"
 
 #: src\docs/get-started.md:272
 msgid "行(Line)、列(Column)は1始まりです。"
@@ -706,6 +813,9 @@ msgid ""
 "<: \"Hello world!\"\n"
 "```"
 msgstr ""
+"```\n"
+"<: \"Hello world!\"\n"
+"```"
 
 #: src\docs/execution.md:21 src\docs/execution.md:35
 msgid "以下のコマンドを実行します。"
@@ -752,12 +862,14 @@ msgid ""
 "を与えません。"
 msgstr ""
 
-#: src\docs/syntax.md:12
-msgid "// 単行コメント"
-msgstr ""
-
-#: src\docs/syntax.md:12
-msgid "/*"
+#: src\docs/syntax.md:11
+msgid ""
+"```aiscript\n"
+"// 単行コメント\n"
+"/*\n"
+"   複数行コメント\n"
+"*/\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:18
@@ -771,8 +883,11 @@ msgid ""
 "このバージョンはホストプログラムによって読み込まれる場合があります。"
 msgstr ""
 
-#: src\docs/syntax.md:22
-msgid "/// @ 0.16.0"
+#: src\docs/syntax.md:21
+msgid ""
+"```aiscript\n"
+"/// @ 0.16.0\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:25
@@ -800,38 +915,28 @@ msgid ""
 "詳しくは[keywords.md](./keywords.md)を参照ください。"
 msgstr ""
 
-#: src\docs/syntax.md:34
-msgid "// イミュータブル（再代入不可）"
+#: src\docs/syntax.md:33
+msgid ""
+"```aiscript\n"
+"// イミュータブル（再代入不可）\n"
+"let answer = 42\n"
+"// ミュータブル（再代入可能）\n"
+"var answer2 = 57\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:35
-msgid "// ミュータブル（再代入可能）"
-msgstr ""
-
-#: src\docs/syntax.md:40
-msgid "// 初期値の省略は不可"
-msgstr ""
-
-#: src\docs/syntax.md:41 src\docs/syntax.md:43 src\docs/syntax.md:98
-#: src\docs/syntax.md:102 src\docs/syntax.md:111 src\docs/syntax.md:196
-#: src\docs/syntax.md:215 src\docs/syntax.md:228 src\docs/syntax.md:376
-#: src\docs/syntax.md:377 src\docs/syntax.md:380 src\docs/syntax.md:381
-#: src\docs/literals.md:69 src\docs/literals.md:103 src\docs/literals.md:105
-msgid "// Syntax Error"
-msgstr ""
-
-#: src\docs/syntax.md:41
-msgid "// match等の予約語は変数名として使用できない"
-msgstr ""
-
-#: src\docs/syntax.md:43
-msgid "// 同名の変数の再宣言は禁止"
-msgstr ""
-
-#: src\docs/syntax.md:46 src\docs/syntax.md:47 src\docs/syntax.md:107
-#: src\docs/syntax.md:124 src\docs/syntax.md:166 src\docs/syntax.md:170
-#: src\docs/syntax.md:176 src\docs/syntax.md:177
-msgid "// Runtime Error"
+#: src\docs/syntax.md:39
+msgid ""
+"```aiscript,playground\n"
+"// 初期値の省略は不可\n"
+"var answer // Syntax Error\n"
+"// match等の予約語は変数名として使用できない\n"
+"let match = 12 // Syntax Error\n"
+"// 同名の変数の再宣言は禁止\n"
+"var a = 1\n"
+"var a = 2 // Runtime Error\n"
+"let a = 3 // Runtime Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:50
@@ -839,91 +944,74 @@ msgid ""
 "関数宣言はイミュータブル変数を関数で初期化するのと同じ動作になっています。"
 msgstr ""
 
-#: src\docs/syntax.md:52 src\docs/literals.md:111
-msgid "// 最後の式が暗黙にreturnされる"
+#: src\docs/syntax.md:51
+msgid ""
+"```aiscript,playground\n"
+"// 最後の式が暗黙にreturnされる\n"
+"@add(x, y) {\n"
+"\tx + y\n"
+"}\n"
+"<: add(1, 2) // 3\n"
+"// 定数をリテラル関数で初期化しても同じ働きになる\n"
+"let add2 = @(x, y) {\n"
+"\tx + y\n"
+"}\n"
+"// 明示的にreturnを書くこともできる\n"
+"@add3(x, y) {\n"
+"\treturn x + y\n"
+"}\n"
+"// 引数を複数行で書いてもよい\n"
+"@add4(\n"
+"\tx,\n"
+"\ty\n"
+") {\n"
+"\tx + y\n"
+"}\n"
+"// 省略可能引数\n"
+"@func1(a, b?) {\n"
+"\t<: a\n"
+"\t<: b // 省略されるとnullになる\n"
+"}\n"
+"func1('hoge') // 'hoge' null\n"
+"// 初期値を設定された引数（省略可能引数と組み合わせて使用可能）\n"
+"@func2(a, b?, c = 'piyo', d?) {\n"
+"\t<: a\n"
+"\t<: b\n"
+"\t<: c\n"
+"\t<: d\n"
+"}\n"
+"func2('hoge', 'fuga') // 'hoge' 'fuga' 'piyo' null\n"
+"// 初期値には変数を使用可能（値は宣言時点で固定）\n"
+"var v = 'hoge'\n"
+"@func3(a = v) {\n"
+"\t<: a\n"
+"}\n"
+"v = 'fuga'\n"
+"func3() // 'hoge'\n"
+"// ワンライナー\n"
+"@func4(a,b?,c=1){<:a;<:b;<:c}\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:56 src\docs/syntax.md:393 src\docs/literals.md:116
-msgid "// 3"
-msgstr ""
-
-#: src\docs/syntax.md:56
-msgid "// 定数をリテラル関数で初期化しても同じ働きになる"
-msgstr ""
-
-#: src\docs/syntax.md:60 src\docs/literals.md:116
-msgid "// 明示的にreturnを書くこともできる"
-msgstr ""
-
-#: src\docs/syntax.md:64 src\docs/literals.md:120
-msgid "// 引数を複数行で書いてもよい"
-msgstr ""
-
-#: src\docs/syntax.md:71
-msgid "// 省略可能引数"
-msgstr ""
-
-#: src\docs/syntax.md:75
-msgid "// 省略されるとnullになる"
-msgstr ""
-
-#: src\docs/syntax.md:77 src\docs/syntax.md:85 src\docs/syntax.md:87
-#: src\docs/syntax.md:108 src\docs/syntax.md:132 src\docs/syntax.md:150
-#: src\docs/syntax.md:177 src\docs/syntax.md:244 src\docs/syntax.md:259
-#: src\docs/literals.md:78 src\docs/literals.md:83 src\docs/literals.md:97
-#: src\docs/literals.md:99 src\docs/literals.md:103 src\docs/literals.md:105
-#: src\docs/keywords.md:7
-msgid "'hoge'"
-msgstr ""
-
-#: src\docs/syntax.md:77
-msgid "// 'hoge' null"
-msgstr ""
-
-#: src\docs/syntax.md:77
-msgid "// 初期値を設定された引数（省略可能引数と組み合わせて使用可能）"
-msgstr ""
-
-#: src\docs/syntax.md:79 src\docs/syntax.md:166 src\docs/literals.md:80
-#: src\docs/literals.md:85
-msgid "'piyo'"
-msgstr ""
-
-#: src\docs/syntax.md:85 src\docs/syntax.md:91 src\docs/syntax.md:132
-#: src\docs/syntax.md:150 src\docs/syntax.md:177
-msgid "'fuga'"
-msgstr ""
-
-#: src\docs/syntax.md:85
-msgid "// 'hoge' 'fuga' 'piyo' null"
-msgstr ""
-
-#: src\docs/syntax.md:85
-msgid "// 初期値には変数を使用可能（値は宣言時点で固定）"
-msgstr ""
-
-#: src\docs/syntax.md:92 src\docs/syntax.md:133
-msgid "// 'hoge'"
-msgstr ""
-
-#: src\docs/syntax.md:92 src\docs/syntax.md:405 src\docs/literals.md:128
-msgid "// ワンライナー"
-msgstr ""
-
-#: src\docs/syntax.md:97
-msgid "// match等の予約語は関数名として使用できない"
-msgstr ""
-
-#: src\docs/syntax.md:100
-msgid "// 最後の引数の後にはコロンを付けられない"
-msgstr ""
-
-#: src\docs/syntax.md:104
-msgid "// 変数同様再宣言は不可"
-msgstr ""
-
-#: src\docs/syntax.md:109
-msgid "// 省略可能引数構文と初期値構文は併用できない"
+#: src\docs/syntax.md:96
+msgid ""
+"```aiscript,playground\n"
+"// match等の予約語は関数名として使用できない\n"
+"@match(x, y) { // Syntax Error\n"
+"  x == y\n"
+"}\n"
+"// 最後の引数の後にはコロンを付けられない\n"
+"@add(x, y,) { // Syntax Error\n"
+"\tx + y\n"
+"}\n"
+"// 変数同様再宣言は不可\n"
+"var func = null\n"
+"@func() { // Runtime Error\n"
+"  'hoge'\n"
+"}\n"
+"// 省略可能引数構文と初期値構文は併用できない\n"
+"@func(a? = 1) {} // Syntax Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:114
@@ -934,109 +1022,94 @@ msgstr ""
 msgid "宣言済みの変数の値を変更します。"
 msgstr ""
 
-#: src\docs/syntax.md:119
-msgid "// 1"
+#: src\docs/syntax.md:116
+msgid ""
+"```aiscript,playground\n"
+"var a = 0\n"
+"a = 1\n"
+"<: a // 1\n"
+"```"
 msgstr ""
+"```aiscript,playground\n"
+"var a = 0\n"
+"a = 1\n"
+"<: a // 1\n"
+"```"
 
-#: src\docs/syntax.md:122
-msgid "// letで宣言された変数は代入不可"
+#: src\docs/syntax.md:121
+msgid ""
+"```aiscript,playground\n"
+"// letで宣言された変数は代入不可\n"
+"let a = 0\n"
+"a = 1 // Runtime Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:127
 msgid "分割代入"
 msgstr ""
 
-#: src\docs/syntax.md:129
-msgid "// 配列の分割代入"
+#: src\docs/syntax.md:128
+msgid ""
+"```aiscript,playground\n"
+"// 配列の分割代入\n"
+"var a = ''\n"
+"var b = ''\n"
+"[a, b] = ['hoge', 'fuga']\n"
+"<: a // 'hoge'\n"
+"<: b // 'fuga'\n"
+"// オブジェクトの分割代入\n"
+"{ name: a, nature: b } = { name: 'Ai-chan', nature: 'kawaii' }\n"
+"<: a // 'Ai-chan'\n"
+"<: b // 'kawaii'\n"
+"// 組み合わせ\n"
+"let ai_kun = {\n"
+"  name: 'Ai-kun',\n"
+"  nature: ['kakkoii', 'kawaii', 'ponkotsu'],\n"
+"}\n"
+"{ name: a, nature: [b] } = ai_kun\n"
+"<: a // 'Ai-kun'\n"
+"<: b // 'kakkoii'\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:130 src\docs/syntax.md:131
-msgid "''"
+#: src\docs/syntax.md:148
+msgid ""
+"```aiscript,playground\n"
+"// 宣言で分割代入を使うことも可能\n"
+"let [hoge, fuga] = ['hoge', 'fuga']\n"
+"\n"
+"each let { value: a }, [{ value: 1 }, { value: 2 }] {\n"
+"\t<: a // 1, 2\n"
+"}\n"
+"\n"
+"// 引数でも使用可能\n"
+"@func([a, b] = [0, 0]) {\n"
+"\t[a, b]\n"
+"}\n"
+"func([1, 2]) // [1, 2]\n"
+"func([1]) // [1, null], not [1, 0]\n"
+"func() // [0, 0]\n"
+"\n"
+"// 再宣言を含む宣言は不可\n"
+"var a = 0\n"
+"let [a, b] = [1, 'piyo'] // Runtime Error\n"
+"\n"
+"// 名前空間での宣言では使用不可\n"
+":: Ai {\n"
+"\t// Runtime Error\n"
+"\tlet [chan, kun] = ['kawaii', 'kakkoii']\n"
+"}\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:134
-msgid "// 'fuga'"
-msgstr ""
-
-#: src\docs/syntax.md:134
-msgid "// オブジェクトの分割代入"
-msgstr ""
-
-#: src\docs/syntax.md:136
-msgid "'Ai-chan'"
-msgstr ""
-
-#: src\docs/syntax.md:136 src\docs/syntax.md:142 src\docs/syntax.md:171
-#: src\docs/syntax.md:296
-msgid "'kawaii'"
-msgstr ""
-
-#: src\docs/syntax.md:137
-msgid "// 'Ai-chan'"
-msgstr ""
-
-#: src\docs/syntax.md:138
-msgid "// 'kawaii'"
-msgstr ""
-
-#: src\docs/syntax.md:138
-msgid "// 組み合わせ"
-msgstr ""
-
-#: src\docs/syntax.md:141
-msgid "'Ai-kun'"
-msgstr ""
-
-#: src\docs/syntax.md:142 src\docs/syntax.md:171
-msgid "'kakkoii'"
-msgstr ""
-
-#: src\docs/syntax.md:142
-msgid "'ponkotsu'"
-msgstr ""
-
-#: src\docs/syntax.md:145
-msgid "// 'Ai-kun'"
-msgstr ""
-
-#: src\docs/syntax.md:146
-msgid "// 'kakkoii'"
-msgstr ""
-
-#: src\docs/syntax.md:149
-msgid "// 宣言で分割代入を使うことも可能"
-msgstr ""
-
-#: src\docs/syntax.md:153
-msgid "// 1, 2"
-msgstr ""
-
-#: src\docs/syntax.md:155
-msgid "// 引数でも使用可能"
-msgstr ""
-
-#: src\docs/syntax.md:160
-msgid "// [1, 2]"
-msgstr ""
-
-#: src\docs/syntax.md:161
-msgid "// [1, null], not [1, 0]"
-msgstr ""
-
-#: src\docs/syntax.md:162
-msgid "// [0, 0]"
-msgstr ""
-
-#: src\docs/syntax.md:163
-msgid "// 再宣言を含む宣言は不可"
-msgstr ""
-
-#: src\docs/syntax.md:167
-msgid "// 名前空間での宣言では使用不可"
-msgstr ""
-
-#: src\docs/syntax.md:175
-msgid "// 代入値が分割できる型でなければエラー"
+#: src\docs/syntax.md:174
+msgid ""
+"```aiscript\n"
+"// 代入値が分割できる型でなければエラー\n"
+"[a, b] = 1 // Runtime Error\n"
+"{ zero: a, one: b } = ['hoge', 'fuga'] // Runtime Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:180
@@ -1047,44 +1120,30 @@ msgstr ""
 msgid "与えられた回数のループを行います。"
 msgstr ""
 
-#: src\docs/syntax.md:184
-msgid "'Wan'"
+#: src\docs/syntax.md:182
+msgid ""
+"```aiscript,playground\n"
+"let repeat = 5\n"
+"for repeat print('Wan') // WanWanWanWanWan\n"
+"// {}を使うことで複数の文を書ける\n"
+"for 2 + 3 {\n"
+"\t<: 'Nyan'\n"
+"} // NyanNyanNyanNyanNyan\n"
+"// ()でくくってもよい\n"
+"for ({ a: 3 }.a) {\n"
+"  <: 'Piyo'\n"
+"} // PiyoPiyoPiyo\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:184
-msgid "// WanWanWanWanWan"
-msgstr ""
-
-#: src\docs/syntax.md:184
-msgid "// {}を使うことで複数の文を書ける"
-msgstr ""
-
-#: src\docs/syntax.md:187
-msgid "'Nyan'"
-msgstr ""
-
-#: src\docs/syntax.md:188
-msgid "// NyanNyanNyanNyanNyan"
-msgstr ""
-
-#: src\docs/syntax.md:188
-msgid "// ()でくくってもよい"
-msgstr ""
-
-#: src\docs/syntax.md:191
-msgid "'Piyo'"
-msgstr ""
-
-#: src\docs/syntax.md:192
-msgid "// PiyoPiyoPiyo"
-msgstr ""
-
-#: src\docs/syntax.md:195 src\docs/syntax.md:227
-msgid "// {の直前に空白必須"
-msgstr ""
-
-#: src\docs/syntax.md:197
-msgid "'Mogu'"
+#: src\docs/syntax.md:194
+msgid ""
+"```aiscript,playground\n"
+"// {の直前に空白必須\n"
+"for 5{ // Syntax Error\n"
+"\t<: 'Mogu'\n"
+"}\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:200
@@ -1095,20 +1154,27 @@ msgstr ""
 msgid "イテレータ変数を宣言し、ループ内で参照することができます。"
 msgstr ""
 
-#: src\docs/syntax.md:205
-msgid "// 0 1 2 3 4"
+#: src\docs/syntax.md:202
+msgid ""
+"```aiscript,playground\n"
+"for let i, 5 {\n"
+"\t<: i\n"
+"} // 0 1 2 3 4\n"
+"// 初期値を設定することもできる\n"
+"for let i = 3, 5 {\n"
+"\t<: i\n"
+"} // 3 4 5 6 7\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:205
-msgid "// 初期値を設定することもできる"
-msgstr ""
-
-#: src\docs/syntax.md:209
-msgid "// 3 4 5 6 7"
-msgstr ""
-
-#: src\docs/syntax.md:212
-msgid "// イテレータ変数はletで宣言される必要がある"
+#: src\docs/syntax.md:211
+msgid ""
+"```aiscript,playground\n"
+"// イテレータ変数はletで宣言される必要がある\n"
+"for var i, 5 {\n"
+"\t<: i\n"
+"} // Syntax Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:218
@@ -1119,20 +1185,30 @@ msgstr ""
 msgid "配列の各要素に対しループを行います。"
 msgstr ""
 
-#: src\docs/syntax.md:221
-msgid "'foo'"
+#: src\docs/syntax.md:220
+msgid ""
+"```aiscript,playground\n"
+"let arr = ['foo', 'bar', 'baz']\n"
+"each let v, arr {\n"
+"\t<: v\n"
+"} // foo bar baz\n"
+"```"
 msgstr ""
+"```aiscript,playground\n"
+"let arr = ['foo', 'bar', 'baz']\n"
+"each let v, arr {\n"
+"\t<: v\n"
+"} // foo bar baz\n"
+"```"
 
-#: src\docs/syntax.md:221
-msgid "'bar'"
-msgstr ""
-
-#: src\docs/syntax.md:221
-msgid "'baz'"
-msgstr ""
-
-#: src\docs/syntax.md:224
-msgid "// foo bar baz"
+#: src\docs/syntax.md:226
+msgid ""
+"```aiscript,playground\n"
+"// {の直前に空白必須\n"
+"each let v, arr{ // Syntax Error\n"
+"\t<: v\n"
+"}\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:233
@@ -1145,16 +1221,19 @@ msgid ""
 "条件が最初からfalseの場合はループは実行されません。"
 msgstr ""
 
-#: src\docs/syntax.md:241 src\docs/syntax.md:256
-msgid "// 42"
-msgstr ""
-
-#: src\docs/syntax.md:241 src\docs/syntax.md:256
-msgid "// 条件が最初からfalseの場合"
-msgstr ""
-
-#: src\docs/syntax.md:245
-msgid "// no output"
+#: src\docs/syntax.md:236
+msgid ""
+"```aiscript,playground\n"
+"var count = 0\n"
+"while count < 42 {\n"
+"\tcount += 1\n"
+"}\n"
+"<: count // 42\n"
+"// 条件が最初からfalseの場合\n"
+"while false {\n"
+"  <: 'hoge'\n"
+"} // no output\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:248
@@ -1167,8 +1246,19 @@ msgid ""
 "条件が最初からfalseであってもループは一度実行されます。"
 msgstr ""
 
-#: src\docs/syntax.md:260
-msgid "// hoge"
+#: src\docs/syntax.md:251
+msgid ""
+"```aiscript,playground\n"
+"var count = 0\n"
+"do {\n"
+"\tcount += 1\n"
+"} while count < 42\n"
+"<: count // 42\n"
+"// 条件が最初からfalseの場合\n"
+"do {\n"
+"  <: 'hoge'\n"
+"} while false // hoge\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:263
@@ -1179,9 +1269,25 @@ msgstr ""
 msgid "`break`されるまで無制限にループを行います。"
 msgstr ""
 
-#: src\docs/syntax.md:271
-msgid "// 5 4 3 2 1"
+#: src\docs/syntax.md:265
+msgid ""
+"```aiscript,playground\n"
+"var i = 5\n"
+"loop {\n"
+"\t<: i\n"
+"\ti -= 1\n"
+"\tif i == 0 break\n"
+"} // 5 4 3 2 1\n"
+"```"
 msgstr ""
+"```aiscript,playground\n"
+"var i = 5\n"
+"loop {\n"
+"\t<: i\n"
+"\ti -= 1\n"
+"\tif i == 0 break\n"
+"} // 5 4 3 2 1\n"
+"```"
 
 #: src\docs/syntax.md:274
 msgid "グローバル専用文"
@@ -1207,21 +1313,32 @@ msgid ""
 "以外の式を含むと構文エラーとなります。"
 msgstr ""
 
-#: src\docs/syntax.md:284
-msgid "\"example\""
+#: src\docs/syntax.md:282
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "### {\n"
+#| "\tname: \"example\"\n"
+#| "\tversion: 42\n"
+#| "\tkeywords: [\"foo\", \"bar\", \"baz\"]\n"
+#| "}\n"
+#| "```"
+msgid ""
+"```aiscript\n"
+"### {\n"
+"\tname: \"example\"\n"
+"\tversion: 42\n"
+"\tkeywords: [\"foo\", \"bar\", \"baz\"]\n"
+"}\n"
+"```"
 msgstr ""
-
-#: src\docs/syntax.md:286
-msgid "\"foo\""
-msgstr ""
-
-#: src\docs/syntax.md:286
-msgid "\"bar\""
-msgstr ""
-
-#: src\docs/syntax.md:286
-msgid "\"baz\""
-msgstr ""
+"```\n"
+"### {\n"
+"\tname: \"example\"\n"
+"\tversion: 42\n"
+"\tkeywords: [\"foo\", \"bar\", \"baz\"]\n"
+"}\n"
+"```"
 
 #: src\docs/syntax.md:290
 msgid "名前空間"
@@ -1234,9 +1351,29 @@ msgid ""
 "未発達な機能であり、今後役割が大きく変更される可能性があります。"
 msgstr ""
 
-#: src\docs/syntax.md:301 src\docs/syntax.md:302
-msgid "// kawaii"
+#: src\docs/syntax.md:294
+msgid ""
+"```aiscript,playground\n"
+":: Ai {\n"
+"\tlet chan = 'kawaii'\n"
+"\t@kun() {\n"
+"\t\t<: chan\n"
+"\t}\n"
+"}\n"
+"<: Ai:chan // kawaii\n"
+"Ai:kun() // kawaii\n"
+"```"
 msgstr ""
+"```aiscript,playground\n"
+":: Ai {\n"
+"\tlet chan = 'kawaii'\n"
+"\t@kun() {\n"
+"\t\t<: chan\n"
+"\t}\n"
+"}\n"
+"<: Ai:chan // kawaii\n"
+"Ai:kun() // kawaii\n"
+"```"
 
 #: src\docs/syntax.md:305
 msgid "式"
@@ -1327,68 +1464,43 @@ msgid ""
 "条件式が`bool`型ではない値に評価されるとエラーになります。"
 msgstr ""
 
-#: src\docs/syntax.md:353
-msgid "// 単行"
+#: src\docs/syntax.md:352
+msgid ""
+"```aiscript,playground\n"
+"// 単行\n"
+"if answer == 42 print(\"correct answer\")\n"
+"// 複数行\n"
+"if answer == 42 {\n"
+"\t<: \"correct answer\"\n"
+"}\n"
+"// 条件式は()で囲ってもよい\n"
+"if ({ a: true }.a) print('ok')\n"
+"// 式として使用可能\n"
+"<: `{if answer == 42 \"collect answer\"}`\n"
+"// else, elifも使用可能\n"
+"let result = if answer == \"bebeyo\" {\n"
+"\t\"correct answer\"\n"
+"} elif answer == \"ai\" {\n"
+"\t\"kawaii\"\n"
+"} else {\n"
+"\t\"wrong answer\"\n"
+"}\n"
+"// elseがない場合、条件式がfalseならnullを返す\n"
+"<: if false 1 // null\n"
+"```"
 msgstr ""
 
-#: src\docs/syntax.md:354 src\docs/syntax.md:357 src\docs/syntax.md:365
-msgid "\"correct answer\""
-msgstr ""
-
-#: src\docs/syntax.md:354
-msgid "// 複数行"
-msgstr ""
-
-#: src\docs/syntax.md:358
-msgid "// 条件式は()で囲ってもよい"
-msgstr ""
-
-#: src\docs/syntax.md:360
-msgid "'ok'"
-msgstr ""
-
-#: src\docs/syntax.md:360
-msgid "// 式として使用可能"
-msgstr ""
-
-#: src\docs/syntax.md:362
-msgid "`{if answer == 42 \"collect answer\"}`"
-msgstr ""
-
-#: src\docs/syntax.md:362
-msgid "// else, elifも使用可能"
-msgstr ""
-
-#: src\docs/syntax.md:364
-msgid "\"bebeyo\""
-msgstr ""
-
-#: src\docs/syntax.md:366
-msgid "\"ai\""
-msgstr ""
-
-#: src\docs/syntax.md:367
-msgid "\"kawaii\""
-msgstr ""
-
-#: src\docs/syntax.md:369
-msgid "\"wrong answer\""
-msgstr ""
-
-#: src\docs/syntax.md:370
-msgid "// elseがない場合、条件式がfalseならnullを返す"
-msgstr ""
-
-#: src\docs/syntax.md:372
-msgid "// null"
-msgstr ""
-
-#: src\docs/syntax.md:375
-msgid "// 条件式の前後の空白は必須（かっこでくくっていても）"
-msgstr ""
-
-#: src\docs/syntax.md:377
-msgid "// elif, elseの直前の空白は必須"
+#: src\docs/syntax.md:374
+msgid ""
+"```aiscript,playground\n"
+"// 条件式の前後の空白は必須（かっこでくくっていても）\n"
+"if(true) return 1 // Syntax Error\n"
+"if (true)return 1 // Syntax Error\n"
+"// elif, elseの直前の空白は必須\n"
+"if (false) {\n"
+"}elif (true) { // Syntax Error\n"
+"}else {} // Syntax Error\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:384
@@ -1399,24 +1511,56 @@ msgstr ""
 msgid "別名ブロック式。 `{ }`内の文を順次評価し、最後の文の値を返します。"
 msgstr ""
 
+#: src\docs/syntax.md:387
+#, fuzzy
+#| msgid ""
+#| "```\n"
+#| "let foo = eval {\n"
+#| "\tlet a = 1\n"
+#| "\tlet b = 2\n"
+#| "\t(a + b)\n"
+#| "}\n"
+#| "\n"
+#| "<: foo // 3\n"
+#| "```"
+msgid ""
+"```aiscript,playground\n"
+"let foo = eval {\n"
+"\tlet x = 1\n"
+"\tlet y = 2\n"
+"\tx + y\n"
+"}\n"
+"<: foo // 3\n"
+"```"
+msgstr ""
+"```\n"
+"let foo = eval {\n"
+"\tlet a = 1\n"
+"\tlet b = 2\n"
+"\t(a + b)\n"
+"}\n"
+"\n"
+"<: foo // 3\n"
+"```"
+
 #: src\docs/syntax.md:396
 msgid "match"
 msgstr ""
 
-#: src\docs/syntax.md:400 src\docs/syntax.md:407
-msgid "\"yes\""
-msgstr ""
-
-#: src\docs/syntax.md:401 src\docs/syntax.md:407
-msgid "\"no\""
-msgstr ""
-
-#: src\docs/syntax.md:402 src\docs/syntax.md:407
-msgid "\"other\""
-msgstr ""
-
-#: src\docs/syntax.md:404 src\docs/syntax.md:407
-msgid "// \"yes\""
+#: src\docs/syntax.md:397
+msgid ""
+"```aiscript,playground\n"
+"let x = 1\n"
+"let y = match x {\n"
+"\tcase 1 => \"yes\"\n"
+"\tcase 0 => \"no\"\n"
+"\tdefault => \"other\"\n"
+"}\n"
+"<: y // \"yes\"\n"
+"\n"
+"// ワンライナー\n"
+"<:match x{case 1=>\"yes\",case 0=>\"no\",default=>\"other\"} // \"yes\"\n"
+"```"
 msgstr ""
 
 #: src\docs/syntax.md:410
@@ -1428,12 +1572,14 @@ msgid ""
 "与えられた名称の変数または関数が存在すればtrue、しなければfalseを返します。"
 msgstr ""
 
-#: src\docs/syntax.md:413
-msgid "// 変数barは存在しないためfalse"
-msgstr ""
-
-#: src\docs/syntax.md:414
-msgid "// 変数fooが存在するためtrue"
+#: src\docs/syntax.md:412
+msgid ""
+"```aiscript\n"
+"// 変数barは存在しないためfalse\n"
+"var foo = exists bar\n"
+"// 変数fooが存在するためtrue\n"
+"var bar = exists foo\n"
+"```"
 msgstr ""
 
 #: src\docs/literals.md:2
@@ -1459,16 +1605,13 @@ msgstr ""
 msgid "十進以外の記数法はサポートされていません。"
 msgstr ""
 
-#: src\docs/literals.md:20
-msgid "// 自然数"
-msgstr ""
-
-#: src\docs/literals.md:21
-msgid "// 負数"
-msgstr ""
-
-#: src\docs/literals.md:22
-msgid "// 小数"
+#: src\docs/literals.md:19
+msgid ""
+"```aiscript\n"
+"12 // 自然数\n"
+"-34 // 負数\n"
+"52.448 // 小数\n"
+"```"
 msgstr ""
 
 #: src\docs/literals.md:24
@@ -1508,36 +1651,18 @@ msgstr ""
 msgid "文字列リテラル"
 msgstr ""
 
-#: src\docs/literals.md:41
-msgid "'ここでは\"を文字列に含むことができます'"
-msgstr ""
-
-#: src\docs/literals.md:41
-msgid "\"ここでは'を文字列に含むことができます\""
-msgstr ""
-
-#: src\docs/literals.md:42
-msgid "'エスケープすれば\\'を含むことができます'"
-msgstr ""
-
-#: src\docs/literals.md:43
-msgid "\"エスケープすれば\\\"を含むことができます\""
-msgstr ""
-
-#: src\docs/literals.md:44
-msgid "'改行"
-msgstr ""
-
-#: src\docs/literals.md:46
-msgid "'"
-msgstr ""
-
-#: src\docs/literals.md:46
-msgid "\"改行 // ここにコメントを書くと文字列の一部になります"
-msgstr ""
-
-#: src\docs/literals.md:48
-msgid "\" // ここは問題なし"
+#: src\docs/literals.md:40
+msgid ""
+"```aiscript\n"
+"'ここでは\"を文字列に含むことができます'\n"
+"\"ここでは'を文字列に含むことができます\"\n"
+"'エスケープすれば\\'を含むことができます'\n"
+"\"エスケープすれば\\\"を含むことができます\"\n"
+"'改行\n"
+"できます'\n"
+"\"改行 // ここにコメントを書くと文字列の一部になります\n"
+"できます\" // ここは問題なし\n"
+"```"
 msgstr ""
 
 #: src\docs/literals.md:51
@@ -1552,86 +1677,77 @@ msgid ""
 "れます。"
 msgstr ""
 
-#: src\docs/literals.md:56
-msgid "`Ai chan is No.{ 2-1 }` // Ai chan is No.1"
-msgstr ""
-
-#: src\docs/literals.md:56
-msgid "// 改行可　一行にしたい場合は{ Str:lf }を使う"
-msgstr ""
-
-#: src\docs/literals.md:57
-msgid "`This statement is { true }."
-msgstr ""
-
-#: src\docs/literals.md:59
-msgid "// \\を前置することで`、{、}、をエスケープできる"
-msgstr ""
-
-#: src\docs/literals.md:60
-msgid "`\\` \\{ \\}` // ` { }"
-msgstr ""
-
-#: src\docs/literals.md:64
+#: src\docs/literals.md:55
 msgid ""
+"```aiscript,playground\n"
+"<: `Ai chan is No.{ 2-1 }` // Ai chan is No.1\n"
+"// 改行可　一行にしたい場合は{ Str:lf }を使う\n"
+"`This statement is { true }.\n"
+"Previous statement is { !true }.`\n"
+"// \\を前置することで`、{、}、をエスケープできる\n"
+"`\\` \\{ \\}` // ` { }\n"
+"```"
+msgstr ""
+
+#: src\docs/literals.md:63
+msgid ""
+"```aiscript,playground\n"
 "// { }の中身が空であってはならない（{ }を文字列として使いたい場合はエスケープ"
-"すること）"
+"すること）\n"
+"`Everything is { } here.` // Syntax Error\n"
+"// 式の前後で改行をしてはならない（式中で改行するのは可）\n"
+"`Oops, something went {\n"
+"\t'wrong'\n"
+"}!` // Syntax Error\n"
+"```"
 msgstr ""
 
-#: src\docs/literals.md:64
-msgid "`Everything is { } here.` // Syntax Error"
+#: src\docs/literals.md:73
+msgid ""
+"```aiscript\n"
+"[] // 空の配列\n"
+"[1, 1+1, 1+1+1] // コロンで区切ることも出来る\n"
+"[1, 1+1, 1+1+1,] // 最後の項に,をつけてもよい\n"
+"[  // 改行区切りも可\n"
+"\t'hoge'\n"
+"\t'huga'\n"
+"\t'piyo'\n"
+"]\n"
+"[  // コロンと改行の併用可\n"
+"\t'hoge',\n"
+"\t'huga',\n"
+"\t'piyo',\n"
+"]\n"
+"```"
 msgstr ""
 
-#: src\docs/literals.md:65
-msgid "// 式の前後で改行をしてはならない（式中で改行するのは可）"
+#: src\docs/literals.md:88
+msgid ""
+"```aiscript,playground\n"
+"[1 2 3] // 空白区切りは廃止済み\n"
+"```"
 msgstr ""
 
-#: src\docs/literals.md:66
-msgid "`Oops, something went {"
+#: src\docs/literals.md:93
+msgid ""
+"```aiscript\n"
+"{} // 空のオブジェクト\n"
+"{ // 改行区切り\n"
+"\ta: 12\n"
+"\tb: 'hoge'\n"
+"}\n"
+"{a: 12,b: 'hoge'} // コロン区切り\n"
+"```"
 msgstr ""
 
-#: src\docs/literals.md:74
-msgid "// 空の配列"
-msgstr ""
-
-#: src\docs/literals.md:75
-msgid "// コロンで区切ることも出来る"
-msgstr ""
-
-#: src\docs/literals.md:76
-msgid "// 最後の項に,をつけてもよい"
-msgstr ""
-
-#: src\docs/literals.md:77
-msgid "// 改行区切りも可"
-msgstr ""
-
-#: src\docs/literals.md:79 src\docs/literals.md:84
-msgid "'huga'"
-msgstr ""
-
-#: src\docs/literals.md:82
-msgid "// コロンと改行の併用可"
-msgstr ""
-
-#: src\docs/literals.md:89 src\docs/literals.md:102
-msgid "// 空白区切りは廃止済み"
-msgstr ""
-
-#: src\docs/literals.md:94
-msgid "// 空のオブジェクト"
-msgstr ""
-
-#: src\docs/literals.md:95
-msgid "// 改行区切り"
-msgstr ""
-
-#: src\docs/literals.md:99
-msgid "// コロン区切り"
-msgstr ""
-
-#: src\docs/literals.md:103
-msgid "// セミコロン区切りは廃止済み"
+#: src\docs/literals.md:101
+msgid ""
+"```aiscript,playground\n"
+"// 空白区切りは廃止済み\n"
+"{a: 12 b: 'hoge'} // Syntax Error\n"
+"// セミコロン区切りは廃止済み\n"
+"{a: 12; b: 'hoge'} // Syntax Error\n"
+"```"
 msgstr ""
 
 #: src\docs/literals.md:109
@@ -1641,8 +1757,28 @@ msgid ""
 "て、リテラルなので当然ながら、文ではなく式です）"
 msgstr ""
 
-#: src\docs/literals.md:111
-msgid "// 何もしない関数"
+#: src\docs/literals.md:110
+msgid ""
+"```aiscript,playground\n"
+"var func = @(){} // 何もしない関数\n"
+"// 最後の式が暗黙にreturnされる\n"
+"func = @(x, y) {\n"
+"\tx + y\n"
+"}\n"
+"<: func(1, 2) // 3\n"
+"// 明示的にreturnを書くこともできる\n"
+"@(x, y) {\n"
+"\treturn x + y\n"
+"}\n"
+"// 引数を複数行で書いてもよい\n"
+"@(\n"
+"\tx,\n"
+"\ty\n"
+") {\n"
+"\tx + y\n"
+"}\n"
+"@(x,y){x+y} // ワンライナー\n"
+"```"
 msgstr ""
 
 #: src\docs/literals.md:132
@@ -1658,12 +1794,13 @@ msgid ""
 "使用するとSyntax Errorとなります。"
 msgstr ""
 
-#: src\docs/keywords.md:5
-msgid "// matchとforは予約語"
-msgstr ""
-
-#: src\docs/keywords.md:6 src\docs/keywords.md:7
-msgid "// エラー"
+#: src\docs/keywords.md:4
+msgid ""
+"```aiscript,playground\n"
+"// matchとforは予約語\n"
+"let match=null // エラー\n"
+"@for(){ print('hoge') } // エラー\n"
+"```"
 msgstr ""
 
 #: src\docs/keywords.md:10
@@ -2649,21 +2786,21 @@ msgstr ""
 "A built-in property is a special value or function for specific type that "
 "can be called in the same notation as an object property."
 
-#: src\docs/builtin-props.md:4
-msgid "// 例"
-msgstr "// example"
-
-#: src\docs/builtin-props.md:4
-msgid "'ai kawaii'"
-msgstr "'ai kawaii'"
-
-#: src\docs/builtin-props.md:5
-msgid "//9"
-msgstr "//9"
-
-#: src\docs/builtin-props.md:7
-msgid "//[0,1,2,4]"
-msgstr "//[0,1,2,4]"
+#: src\docs/builtin-props.md:3
+msgid ""
+"```aiscript\n"
+"// 例\n"
+"'ai kawaii'.len //9\n"
+"\n"
+"Core:range(0,2).push(4) //[0,1,2,4]\n"
+"```"
+msgstr ""
+"```aiscript\n"
+"// 例\n"
+"'ai kawaii'.len //9\n"
+"\n"
+"Core:range(0,2).push(4) //[0,1,2,4]\n"
+"```"
 
 #: src\docs/builtin-props.md:9
 msgid ""
@@ -3372,3 +3509,18 @@ msgid ""
 msgstr ""
 "type: `value`  \n"
 "Additional information about the error, if any."
+
+#~ msgid "\"Hello, world!\""
+#~ msgstr "\"Hello, world!\""
+
+#~ msgid "// 例"
+#~ msgstr "// example"
+
+#~ msgid "'ai kawaii'"
+#~ msgstr "'ai kawaii'"
+
+#~ msgid "//9"
+#~ msgstr "//9"
+
+#~ msgid "//[0,1,2,4]"
+#~ msgstr "//[0,1,2,4]"

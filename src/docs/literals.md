@@ -4,19 +4,19 @@ AiScriptにおけるリテラルとは、値を文字列として書き表すた
 null、真理値、数値、文字列、オブジェクト、関数のリテラルが存在しています。  
 
 ### null
-```js
+```aiscript
 null
 ```
 
 ### 真理値
-```js
+```aiscript
 true
 false
 ```
 
 ### 数値
 十進以外の記数法はサポートされていません。  
-```js
+```aiscript
 12 // 自然数
 -34 // 負数
 52.448 // 小数
@@ -37,7 +37,7 @@ false
 エスケープシーケンスは未サポートです。  
 
 #### 文字列リテラル
-```js
+```aiscript
 'ここでは"を文字列に含むことができます'
 "ここでは'を文字列に含むことができます"
 'エスケープすれば\'を含むことができます'
@@ -52,7 +52,7 @@ false
 変数や式を埋め込んだ文字列を作成するためのリテラルです。  
 全体を`` ` ` ``で囲い、式を埋め込む場所は`{ }`で囲います。  
 式の値が文字列でない場合は、[Core:to_str](./std.md)と同じ方法で文字列に変換されます。  
-```js
+```aiscript,playground
 <: `Ai chan is No.{ 2-1 }` // Ai chan is No.1
 // 改行可　一行にしたい場合は{ Str:lf }を使う
 `This statement is { true }.
@@ -60,7 +60,7 @@ Previous statement is { !true }.`
 // \を前置することで`、{、}、をエスケープできる
 `\` \{ \}` // ` { }
 ```
-```js
+```aiscript,playground
 // { }の中身が空であってはならない（{ }を文字列として使いたい場合はエスケープすること）
 `Everything is { } here.` // Syntax Error
 // 式の前後で改行をしてはならない（式中で改行するのは可）
@@ -70,7 +70,7 @@ Previous statement is { !true }.`
 ```
 
 ### 配列
-```js
+```aiscript
 [] // 空の配列
 [1, 1+1, 1+1+1] // コロンで区切ることも出来る
 [1, 1+1, 1+1+1,] // 最後の項に,をつけてもよい
@@ -85,12 +85,12 @@ Previous statement is { !true }.`
 	'piyo',
 ]
 ```
-```js
+```aiscript,playground
 [1 2 3] // 空白区切りは廃止済み
 ```
 
 ### オブジェクト
-```js
+```aiscript
 {} // 空のオブジェクト
 { // 改行区切り
 	a: 12
@@ -98,7 +98,7 @@ Previous statement is { !true }.`
 }
 {a: 12,b: 'hoge'} // コロン区切り
 ```
-```js
+```aiscript,playground
 // 空白区切りは廃止済み
 {a: 12 b: 'hoge'} // Syntax Error
 // セミコロン区切りは廃止済み
@@ -107,7 +107,7 @@ Previous statement is { !true }.`
 
 ### 関数
 関数のリテラルは「無名関数」と呼ばれており、[関数の宣言](./syntax.md#%E9%96%A2%E6%95%B0)とよく似た形をしていますが、関数名がありません。（そして、リテラルなので当然ながら、文ではなく式です）  
-```js
+```aiscript,playground
 var func = @(){} // 何もしない関数
 // 最後の式が暗黙にreturnされる
 func = @(x, y) {

@@ -1,7 +1,7 @@
 ## 予約語について
 AiScriptにおける予約語とは、変数や関数の名前として使用することが禁止されている単語のことを言います。  
 使用するとSyntax Errorとなります。  
-```js
+```aiscript,playground
 // matchとforは予約語
 let match=null // エラー
 @for(){ print('hoge') } // エラー

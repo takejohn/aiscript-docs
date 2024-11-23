@@ -8,7 +8,7 @@ AiScriptにおける構文要素は、コメント等を除き「文(statement)�
 ## コメント
 `//`で始めた行や`/*` `*/`で囲んだ箇所はコメントになり、プログラムの動作に影響を与えません。
 
-```js
+```aiscript
 // 単行コメント
 /*
    複数行コメント
@@ -18,7 +18,7 @@ AiScriptにおける構文要素は、コメント等を除き「文(statement)�
 ## バージョン表記
 プログラムの一行目に以下の記法を行うことで、想定されたAiScriptのバージョンを明記することができます。  
 このバージョンはホストプログラムによって読み込まれる場合があります。  
-```js
+```aiscript
 /// @ 0.16.0
 ```
 
@@ -30,13 +30,13 @@ AiScriptにおける構文要素は、コメント等を除き「文(statement)�
 変数や関数の宣言において、名前として使用できないキーワードがいくつかあります。  
 詳しくは[keywords.md](./keywords.md)を参照ください。  
 #### 変数
-```js
+```aiscript
 // イミュータブル（再代入不可）
 let answer = 42
 // ミュータブル（再代入可能）
 var answer2 = 57
 ```
-```js
+```aiscript,playground
 // 初期値の省略は不可
 var answer // Syntax Error
 // match等の予約語は変数名として使用できない
@@ -48,7 +48,7 @@ let a = 3 // Runtime Error
 ```
 #### 関数
 関数宣言はイミュータブル変数を関数で初期化するのと同じ動作になっています。  
-```js
+```aiscript,playground
 // 最後の式が暗黙にreturnされる
 @add(x, y) {
 	x + y
@@ -93,7 +93,7 @@ func3() // 'hoge'
 // ワンライナー
 @func4(a,b?,c=1){<:a;<:b;<:c}
 ```
-```js
+```aiscript,playground
 // match等の予約語は関数名として使用できない
 @match(x, y) { // Syntax Error
   x == y
@@ -113,19 +113,19 @@ var func = null
 
 ### 代入
 宣言済みの変数の値を変更します。  
-```js
+```aiscript,playground
 var a = 0
 a = 1
 <: a // 1
 ```
-```js
+```aiscript,playground
 // letで宣言された変数は代入不可
 let a = 0
 a = 1 // Runtime Error
 ```
 
 #### 分割代入
-```js
+```aiscript,playground
 // 配列の分割代入
 var a = ''
 var b = ''
@@ -145,7 +145,7 @@ let ai_kun = {
 <: a // 'Ai-kun'
 <: b // 'kakkoii'
 ```
-```js
+```aiscript,playground
 // 宣言で分割代入を使うことも可能
 let [hoge, fuga] = ['hoge', 'fuga']
 
@@ -171,7 +171,7 @@ let [a, b] = [1, 'piyo'] // Runtime Error
 	let [chan, kun] = ['kawaii', 'kakkoii']
 }
 ```
-```js
+```aiscript
 // 代入値が分割できる型でなければエラー
 [a, b] = 1 // Runtime Error
 { zero: a, one: b } = ['hoge', 'fuga'] // Runtime Error
@@ -179,7 +179,7 @@ let [a, b] = [1, 'piyo'] // Runtime Error
 
 ### for
 与えられた回数のループを行います。  
-```js
+```aiscript,playground
 let repeat = 5
 for repeat print('Wan') // WanWanWanWanWan
 // {}を使うことで複数の文を書ける
@@ -191,7 +191,7 @@ for ({ a: 3 }.a) {
   <: 'Piyo'
 } // PiyoPiyoPiyo
 ```
-```js
+```aiscript,playground
 // {の直前に空白必須
 for 5{ // Syntax Error
 	<: 'Mogu'
@@ -199,7 +199,7 @@ for 5{ // Syntax Error
 ```
 #### for-let
 イテレータ変数を宣言し、ループ内で参照することができます。  
-```js
+```aiscript,playground
 for let i, 5 {
 	<: i
 } // 0 1 2 3 4
@@ -208,7 +208,7 @@ for let i = 3, 5 {
 	<: i
 } // 3 4 5 6 7
 ```
-```js
+```aiscript,playground
 // イテレータ変数はletで宣言される必要がある
 for var i, 5 {
 	<: i
@@ -217,13 +217,13 @@ for var i, 5 {
 
 ### each
 配列の各要素に対しループを行います。  
-```js
+```aiscript,playground
 let arr = ['foo', 'bar', 'baz']
 each let v, arr {
 	<: v
 } // foo bar baz
 ```
-```js
+```aiscript,playground
 // {の直前に空白必須
 each let v, arr{ // Syntax Error
 	<: v
@@ -233,7 +233,7 @@ each let v, arr{ // Syntax Error
 ### while
 条件がtrueの間ループを続けます。  
 条件が最初からfalseの場合はループは実行されません。
-```js
+```aiscript,playground
 var count = 0
 while count < 42 {
 	count += 1
@@ -248,7 +248,7 @@ while false {
 ### do-while
 条件がtrueの間ループを続けます。  
 条件が最初からfalseであってもループは一度実行されます。
-```js
+```aiscript,playground
 var count = 0
 do {
 	count += 1
@@ -262,7 +262,7 @@ do {
 
 ### loop
 `break`されるまで無制限にループを行います。  
-```js
+```aiscript,playground
 var i = 5
 loop {
 	<: i
@@ -279,7 +279,7 @@ loop {
 オブジェクトリテラルと類似した記法でAiScriptファイルにメタデータを埋め込める機能です。  
 メタデータはホストプログラムによって読まれる場合があります。  
 要素として関数を除く純粋な[リテラル](./literals.md)のみが許可されており、それ以外の式を含むと構文エラーとなります。  
-```js
+```aiscript
 ### {
 	name: "example"
 	version: 42
@@ -291,7 +291,7 @@ loop {
 複数の定数・関数に共通した接頭辞をつけることのできる機能です。  
 ミュータブルな変数の存在は許容されていません。  
 未発達な機能であり、今後役割が大きく変更される可能性があります。  
-```js
+```aiscript,playground
 :: Ai {
 	let chan = 'kawaii'
 	@kun() {
@@ -349,7 +349,7 @@ Ai:kun() // kawaii
 式として扱うことができ、最後の文の値を返します。
 `if`の直後に１つ以上の空白またはタブを挟む必要があります。（改行があっても）  
 条件式が`bool`型ではない値に評価されるとエラーになります。  
-```js
+```aiscript,playground
 // 単行
 if answer == 42 print("correct answer")
 // 複数行
@@ -371,7 +371,7 @@ let result = if answer == "bebeyo" {
 // elseがない場合、条件式がfalseならnullを返す
 <: if false 1 // null
 ```
-```js
+```aiscript,playground
 // 条件式の前後の空白は必須（かっこでくくっていても）
 if(true) return 1 // Syntax Error
 if (true)return 1 // Syntax Error
@@ -384,7 +384,7 @@ if (false) {
 ### eval
 別名ブロック式。
 `{ }`内の文を順次評価し、最後の文の値を返します。
-```js
+```aiscript,playground
 let foo = eval {
 	let x = 1
 	let y = 2
@@ -394,7 +394,7 @@ let foo = eval {
 ```
 
 ### match
-```js
+```aiscript,playground
 let x = 1
 let y = match x {
 	case 1 => "yes"
@@ -409,7 +409,7 @@ let y = match x {
 
 ### exists
 与えられた名称の変数または関数が存在すればtrue、しなければfalseを返します。
-```js
+```aiscript
 // 変数barは存在しないためfalse
 var foo = exists bar
 // 変数fooが存在するためtrue
