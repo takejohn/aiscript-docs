@@ -1,0 +1,59 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push a branch 
+      pages: write     # To push to a GitHub Pages site
+      id-token: write  # To update the deployment status
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 20.x
+
+      - name: Build AiScript
+        run: |
+          cd aiscript
+          npm ci
+          npm run build
+          cd ../bundle
+          npm ci
+          npm run build
+          cd ..
+
+      - name: Install mdBook and mdbook-i18n-helpers
+        run: |
+          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
+          rustup update
+          cargo install mdbook mdbook-i18n-helpers
+
+      - name: Build Book
+        run: |
+          mdbook build
+          MDBOOK_BOOK__LANGUAGE=en mdbook build -d book/en
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: 'book'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
