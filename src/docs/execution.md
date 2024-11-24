@@ -8,7 +8,7 @@ npm run serve
 ```
 
 PlaygroundはGitHubでもホストされています：\
-https://aiscript-dev.github.io/aiscript/
+<https://aiscript-dev.github.io/aiscript/>
 
 ## 2. スクリプトファイルから実行
 ファイルの内容を解析して実行します。

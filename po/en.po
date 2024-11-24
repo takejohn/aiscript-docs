@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AiScript Docs\n"
-"POT-Creation-Date: 2024-11-24T17:21:59+09:00\n"
+"POT-Creation-Date: 2024-11-24T17:29:26+09:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -837,7 +837,7 @@ msgstr ""
 #: src\docs/execution.md:10
 msgid ""
 "PlaygroundはGitHubでもホストされています：  \n"
-"https://aiscript-dev.github.io/aiscript/"
+"<https://aiscript-dev.github.io/aiscript/>"
 msgstr ""
 
 #: src\docs/execution.md:13
@@ -2771,38 +2771,31 @@ msgstr ""
 msgid "ChaCha20"
 msgstr ""
 
-#: src\docs/std-math.md:135
-msgid ""
-"\\[!CAUTION\\] `rc4_legacy`等、浮動小数点数演算を伴う範囲指定整数生成アルゴリ"
-"ズムでは、演算時の丸め誤差により、指定した _max_ の値より大きな値が生成される"
-"可能性があります。"
-msgstr ""
-
-#: src\docs/std-math.md:138
+#: src\docs/std-math.md:139
 msgid "その他"
 msgstr ""
 
-#: src\docs/std-math.md:139
+#: src\docs/std-math.md:140
 msgid "@Math:clz32(_x_: num): num"
 msgstr "@Math:clz32(_x_: num): num"
 
-#: src\docs/std-math.md:140
+#: src\docs/std-math.md:141
 msgid "xを32ビットのバイナリで表現したときの先頭の0の個数を返します。"
 msgstr ""
 
-#: src\docs/std-math.md:142
+#: src\docs/std-math.md:143
 msgid "@Math:fround(_x_: num): num"
 msgstr "@Math:fround(_x_: num): num"
 
-#: src\docs/std-math.md:143
+#: src\docs/std-math.md:144
 msgid "_x_ を32ビットの浮動小数点数に変換した時の値を返します。"
 msgstr ""
 
-#: src\docs/std-math.md:145
+#: src\docs/std-math.md:146
 msgid "@Math:imul(_x_: num, _y_: num): num"
 msgstr "@Math:imul(_x_: num, _y_: num): num"
 
-#: src\docs/std-math.md:146
+#: src\docs/std-math.md:147
 msgid "_x_ と _y_ に対しC言語風の32ビット乗算を行った結果を返します。"
 msgstr ""
 
