@@ -1,5 +1,5 @@
 /** @type import('webpack').Configuration */
-export default {
+module.exports = {
     mode: 'production',
     entry: './index.js'
 }
