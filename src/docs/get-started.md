@@ -28,13 +28,13 @@ print("Hello, world!")
 AiScriptのコメントは`//`で始めます。
 コメントはプログラムの動作に影響を与えません。
 
-```
+```aiscript
 // this is a comment
 ```
 
 複数行にわたってコメントアウトする場合、`/*` `*/`で囲みます。  
 
-```
+```aiscript
 /*
 this is a comment
 */
@@ -55,7 +55,7 @@ this is a comment
 ## 変数
 ### 宣言
 変数宣言は次のように書きます:
-```
+```aiscript
 let message = "Hello"
 ```
 
@@ -63,7 +63,7 @@ let message = "Hello"
 
 AiScriptではこの方法で宣言した変数はイミュータブルです。つまり、変数の値を後から変えることは出来ません。
 再代入可能な変数を作る時は、`let`の代わりに`var`で変数宣言します。例:
-```
+```aiscript
 // ミュータブルな変数を宣言
 var message = "Hello"
 
@@ -77,13 +77,13 @@ message = "Yo"
 
 ### 参照
 変数の値を参照する時は、単に変数名を書きます:
-```
+```aiscript
 print(message)
 ```
 
 ## 配列
 `[]`の中に式をスペースで区切って列挙します。
-```
+```aiscript
 ["ai", "chan", "kawaii"]
 ```
 
@@ -101,7 +101,7 @@ AiScriptにおけるオブジェクトは文字列のみをキーとした連想
 この時キーをプロパティ名と呼びます。  
 `{}`の中にプロパティを`,`/`;`/空白で区切って列挙します。
 プロパティ名と値は`: `で区切ります。
-```
+```aiscript
 {
 	foo: "bar"
 	answer: 42
@@ -121,11 +121,11 @@ let obj = {foo: "bar", answer: 42}
 
 ## 演算
 演算は、
-```
+```aiscript
 (1 + 1)
 ```
 のように書きます。これは標準関数（後述）呼び出しの糖衣構文で、実際にはこのように解釈されます:
-```
+```aiscript
 Core:add(1, 1)
 ```
 詳しくは→[syntax.md](/docs/syntax.md#%E6%BC%94%E7%AE%97%E5%AD%90)
@@ -209,7 +209,7 @@ each (let item, items) {
 ## 関数
 ### 関数定義
 次のように書きます:
-```
+```aiscript
 @fn(x) {
 	(x * 2)
 }
@@ -240,7 +240,7 @@ let ai = "kawaii"
 
 ## メタデータ
 AiScriptファイルにメタデータを埋め込める機能です。
-```
+```aiscript
 ### {
 	name: "example"
 	version: 42
@@ -251,7 +251,7 @@ AiScriptファイルにメタデータを埋め込める機能です。
 ## エラー型
 一部の標準関数は実行失敗時にエラー型の値を返します。  
 これによりエラー処理を行うことができます。  
-```
+```aiscript
 @validate(str){
 	let v=Json:parse(str)
 	if (Core:type(v)=='error') print(v.name)

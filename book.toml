@@ -7,7 +7,7 @@ title = "AiScript Docs"
 
 [output.html]
 additional-css = ["theme/css/language-picker.css"]
-additional-js = ["bundle/dist/main.js"]
+additional-js = ["bundle/dist/main.js", "theme/js/language-aiscript.js"]
 
 [build]
 extra-watch-dirs = ["po"]

@@ -14,7 +14,7 @@ https://aiscript-dev.github.io/aiscript/
 ファイルの内容を解析して実行します。
 
 プロジェクトルートに`main.ais`を作成し、以下の内容を記述しファイルに保存します。
-```
+```aiscript
 <: "Hello world!"
 ```
 
@@ -28,7 +28,7 @@ $ npm run start
 主にパーサーのデバッグ向けで、インタプリタの実装状況に関わらずASTの内容を表示することができます。
 
 プロジェクトルートに`main.ais`を作成し、以下の内容を記述しファイルに保存します。
-```
+```aiscript
 <: "Hello world!"
 ```
 

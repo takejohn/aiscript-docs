@@ -1,9 +1,12 @@
 # AiScript Docs
 
 ## ビルド方法
-1. AiScriptをビルドします
+1. AiScriptをビルドします。
    ```sh
+   git submodule init
+   git submodule update
    cd aiscript
+   npm install
    npm run build
    cd ../bundle
    npm install
