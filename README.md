@@ -1,5 +1,9 @@
 # AiScript Docs
 
+> [!WARNING]
+> **このリポジトリは現在管理されていません。**  
+> **AiScriptのドキュメントは [aiscript-dev/aiscript-dev.github.io](https://github.com/aiscript-dev/aiscript-dev.github.io) で管理されています。**
+
 ## ビルド方法
 1. AiScriptをビルドします。
    ```sh
